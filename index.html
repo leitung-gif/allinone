@@ -3,152 +3,255 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All in one Beauty | Premium Kosmetikstudio Schweiz</title>
-    <meta name="description" content="All in one Beauty by Daniela. Ihr exklusives Kosmetikstudio in der Schweiz für luxuriöse Gesichtsbehandlungen, Anti-Aging und absolute Perfektion.">
-    <meta name="keywords" content="Kosmetikstudio Schweiz, All in one Beauty, Anti-Aging, Gesichtsbehandlung, Wimpern, Daniela Kosmetik">
-    
-    <!-- Fonts: Cormorant Garamond & Jost -->
+    <title>All in one Beauty | Premium Kosmetikstudio Schweiz – by Daniela</title>
+    <meta name="description" content="Willkommen bei All in one Beauty von Daniela. Ihr exklusives Kosmetikstudio in der Schweiz für luxuriöse Gesichtsbehandlungen, Anti-Aging, Wimpern und absolute Perfektion.">
+    <meta property="og:title" content="All in one Beauty | Premium Kosmetikstudio Schweiz">
+    <meta property="og:description" content="Ihr exklusives Kosmetikstudio in der Schweiz für luxuriöse Gesichtsbehandlungen, Anti-Aging und absolute Perfektion.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Header Navigation -->
+    <!-- ========== HEADER ========== -->
     <header class="header">
-        <div class="container">
-            <a href="index.html" class="logo">
-                <img src="https://www.all-in-one-beauty.ch/wp-content/uploads/logo-neu-Kopie-1.png" alt="All in one Beauty Logo">
-            </a>
-            
-            <button class="nav-toggle" aria-label="Menu öffnen">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-            
-            <nav class="nav-links">
-                <a href="index.html" class="active">Home</a>
-                <a href="behandlungen.html">Behandlungen</a>
-                <a href="ueber-mich.html">Über mich</a>
-                <a href="kontakt.html">Kontakt</a>
-            </nav>
+        <div class="page-padding">
+            <div class="header-topbar">
+                <a href="mailto:info@all-in-one-beauty.ch">E: info@all-in-one-beauty.ch</a>
+                <a href="https://wa.me/41000000000" target="_blank">WhatsApp: Jetzt schreiben</a>
+            </div>
+            <div class="container">
+                <div class="nav-container">
+                    <a href="index.html" class="logo">
+                        <img src="https://www.all-in-one-beauty.ch/wp-content/uploads/logo-neu-Kopie-1.png" alt="All in one Beauty Logo">
+                    </a>
+
+                    <button class="nav-toggle" aria-label="Menu öffnen">
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                    <nav class="nav-links">
+                        <a href="index.html" class="nav-link active">Home</a>
+                        <a href="behandlungen.html" class="nav-link">Behandlungen</a>
+                        <a href="ueber-mich.html" class="nav-link">Über mich</a>
+                        <a href="kontakt.html" class="nav-link">Kontakt</a>
+                        <a href="kontakt.html" class="btn btn-filled">Termin Buchen</a>
+                    </nav>
+                </div>
+            </div>
         </div>
     </header>
 
-    <!-- Floating Action Button: Termin Buchen -->
+    <!-- Floating Action Button -->
     <a href="kontakt.html" class="fab">
-        Termin <i class="fa-solid fa-calendar-check"></i>
+        Termin Buchen <i class="fa-solid fa-arrow-right"></i>
     </a>
 
-    <!-- Hero Section -->
+    <!-- ========== HERO ========== -->
     <section class="hero">
-        <div class="hero-bg"></div>
-        <div class="container fade-up">
-            <div class="hero-content">
-                <span class="hero-subtitle">Das Geheimnis zeitloser Schönheit.</span>
-                <h1>Absolute Perfektion für Ihre Haut.</h1>
-                <p>Willkommen bei All in one Beauty. Erleben Sie luxuriöse Kosmetikbehandlungen und state-of-the-art Anti-Aging auf höchstem Niveau in der Schweiz.</p>
-                <div class="flex" style="gap: 1.5rem; margin-top: 2rem;">
-                    <a href="kontakt.html" class="btn btn-primary">Termin Buchen</a>
-                    <a href="behandlungen.html" class="btn btn-outline">Behandlungen</a>
+        <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&q=80&w=1920" alt="All in one Beauty Studio" class="hero-img">
+        <div class="hero-overlay"></div>
+        <div class="hero-content page-padding">
+            <div class="container fade-up">
+                <div class="signpost">
+                    <span class="signpost-text">Willkommen</span>
+                    <div class="signpost-line"></div>
+                </div>
+                <h1><em>Willkommen bei</em><br><span class="caps">ALL IN ONE BEAUTY</span></h1>
+                <div class="hero-btns">
+                    <a href="kontakt.html" class="arrow-link">
+                        <span>Termin Buchen</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" viewBox="0 0 21 14" fill="none"><path d="M20.1336 7.00037C16.2576 7.00037 13.1152 3.86612 13.1152 0M20.1336 7.00037C16.2576 7.00037 13.1152 10.1339 13.1152 14M20.1336 7.00037L0 7" stroke="currentColor"/></svg>
+                    </a>
+                    <a href="behandlungen.html" class="arrow-link">
+                        <span>Behandlungen</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" viewBox="0 0 21 14" fill="none"><path d="M20.1336 7.00037C16.2576 7.00037 13.1152 3.86612 13.1152 0M20.1336 7.00037C16.2576 7.00037 13.1152 10.1339 13.1152 14M20.1336 7.00037L0 7" stroke="currentColor"/></svg>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Overview Section -->
-    <section class="section" id="services">
-        <div class="container fade-up">
-            <div class="section-header text-center">
-                <span class="section-subtitle">Exzellenz in jeder Behandlung</span>
-                <h2>Unsere Signature Services</h2>
-                <p>Maßgeschneiderte Konzepte für außergewöhnliche Resultate.</p>
-            </div>
-            
-            <div class="services-grid">
-                <div class="service-card fade-up">
-                    <i class="fa-solid fa-spa service-icon"></i>
-                    <h3 class="service-title">Gesichtspflege</h3>
-                    <p>Tiefenwirksame Reinigungen und intensive Powerpflege für einen makellosen Teint.</p>
-                    <a href="behandlungen.html" class="service-link">Mehr entdecken <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-                
-                <div class="service-card fade-up" style="transition-delay: 0.1s;">
-                    <i class="fa-solid fa-syringe service-icon"></i>
-                    <h3 class="service-title">Anti-Aging</h3>
-                    <p>Hocheffektive Methoden zur Faltenstraffung und Hautverjüngung für zeitlose Strahlkraft.</p>
-                    <a href="behandlungen.html" class="service-link">Ergebnisse ansehen <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-                
-                <div class="service-card fade-up" style="transition-delay: 0.2s;">
-                    <i class="fa-solid fa-eye service-icon"></i>
-                    <h3 class="service-title">Wimpern & Brauen</h3>
-                    <p>Von Lash-Lifting bis Microblading – für einen ausdrucksstarken, faszinierenden Blick.</p>
-                    <a href="behandlungen.html" class="service-link">Perfekter Aufschlag <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Snippet -->
-    <section class="section" style="background-color: var(--clr-bg-alt);">
-        <div class="container fade-up">
-            <div class="about-grid">
-                <div class="fade-up">
-                    <span class="section-subtitle">Philosophie & Expertise</span>
-                    <h2>Ihre Schönheit in den besten Händen.</h2>
-                    <p>Mein Name ist Daniela. Alsleidenschaftliche Kosmetikexpertin ist es mein persönliches Anliegen, die natürliche Schönheit meiner Kunden maximal zu betonen.</p>
-                    <p>Bei "All in one Beauty" verschmelzen jahrelange Erfahrung, modernste Behandlungstechnologien und die erlesensten Wirkstoffkomplexe zu einem einzigartigen Kosmetikerlebnis.</p>
-                    <a href="ueber-mich.html" class="btn btn-primary" style="margin-top: 1.5rem;">Lernen Sie mich kennen</a>
-                </div>
-                <div class="about-image fade-up">
-                    <img src="https://www.all-in-one-beauty.ch/wp-content/uploads/IMG_0017-300x300.jpeg" alt="Daniela - All in one Beauty Expertin">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact & Footer Snippet -->
-    <footer class="footer">
-        <div class="container fade-up">
-            <div class="footer-grid">
-                <div>
-                    <h4>All in one Beauty</h4>
-                    <p>Premium Kosmetik & Anti-Aging in der Schweiz. Ihr Zufluchtsort für echte Resultate und tiefgehende Entspannung.</p>
-                </div>
-                <div>
-                    <h4>Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="behandlungen.html">Behandlungen</a></li>
-                        <li><a href="ueber-mich.html">Über Daniela</a></li>
-                        <li><a href="kontakt.html">Buchung & Kontakt</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Connect</h4>
-                    <div class="social-links" style="margin-bottom: 20px;">
-                        <a href="#" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+    <!-- ========== INTRO ========== -->
+    <section class="section-padding">
+        <div class="page-padding">
+            <div class="container">
+                <div class="intro-grid fade-up">
+                    <div class="signpost" style="flex-direction: column; align-items: flex-start;">
+                        <span class="signpost-text">Einführung</span>
+                        <div class="signpost-line"></div>
                     </div>
-                    <ul class="footer-links">
-                        <li><a href="mailto:info@all-in-one-beauty.ch"><i class="fa-solid fa-envelope" style="margin-right:10px;"></i>info@all-in-one-beauty.ch</a></li>
-                    </ul>
+                    <div class="intro-text">
+                        <h2><em>Ihr exklusives Kosmetikstudio</em> in der Schweiz. Ein Ort, an dem <span class="caps">PERFEKTION</span> auf <span class="caps">LEIDENSCHAFT</span> trifft.</h2>
+                        <div style="margin-top: 2rem;">
+                            <a href="ueber-mich.html" class="btn">Über Daniela</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 All in one Beauty by Daniela. Alle Rechte vorbehalten. | <a href="#" style="color:var(--clr-text-muted);">Impressum</a> | <a href="#" style="color:var(--clr-text-muted);">Datenschutz</a></p>
+        </div>
+    </section>
+
+    <div class="page-padding"><div class="container"><div class="section-divider"></div></div></div>
+
+    <!-- ========== SERVICES RANGE ========== -->
+    <section class="section-padding">
+        <div class="page-padding">
+            <div class="container">
+                <div class="signpost fade-up">
+                    <span class="signpost-text">Unsere Behandlungen</span>
+                    <div class="signpost-line"></div>
+                </div>
+
+                <div class="range-grid fade-up" data-delay="1">
+                    <a href="behandlungen.html" class="range-item">
+                        <div class="range-item-bg" style="background-image: url('https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&q=80&w=800');"></div>
+                        <div class="range-item-overlay"></div>
+                        <div class="range-item-content">
+                            <div class="range-number">1</div>
+                            <div class="range-title"><em>Gesichts</em><span class="range-title-caps">pflege</span></div>
+                        </div>
+                    </a>
+                    <a href="behandlungen.html" class="range-item">
+                        <div class="range-item-bg" style="background-image: url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=800');"></div>
+                        <div class="range-item-overlay"></div>
+                        <div class="range-item-content">
+                            <div class="range-number">2</div>
+                            <div class="range-title"><em>Anti-</em><span class="range-title-caps">Aging</span></div>
+                        </div>
+                    </a>
+                    <a href="behandlungen.html" class="range-item">
+                        <div class="range-item-bg" style="background-image: url('https://images.unsplash.com/photo-1512496015851-a1fbcf69d39e?auto=format&fit=crop&q=80&w=800');"></div>
+                        <div class="range-item-overlay"></div>
+                        <div class="range-item-content">
+                            <div class="range-number">3</div>
+                            <div class="range-title"><em>Lashes &</em><span class="range-title-caps">Brows</span></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ABOUT SPLIT ========== -->
+    <section class="about-split">
+        <div class="about-img-col">
+            <img src="https://www.all-in-one-beauty.ch/wp-content/uploads/IMG_0017-300x300.jpeg" alt="Daniela – All in one Beauty">
+        </div>
+        <div class="about-text-col fade-up">
+            <div class="signpost">
+                <span class="signpost-text">Philosophie</span>
+                <div class="signpost-line"></div>
+            </div>
+            <h2><em>Ihre Schönheit,</em><br><span class="caps">MEINE BERUFUNG</span></h2>
+            <p>Mein Name ist Daniela. Als leidenschaftliche Kosmetikexpertin ist es mein persönliches Anliegen, die natürliche Schönheit meiner Kundinnen und Kunden maximal zu betonen. Bei All in one Beauty verschmelzen jahrelange Erfahrung, modernste Behandlungstechnologien und die erlesensten Wirkstoffkomplexe zu einem einzigartigen Erlebnis.</p>
+            <div style="margin-top: 1rem;">
+                <a href="ueber-mich.html" class="arrow-link">
+                    <span>Über mich</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" viewBox="0 0 21 14" fill="none"><path d="M20.1336 7.00037C16.2576 7.00037 13.1152 3.86612 13.1152 0M20.1336 7.00037C16.2576 7.00037 13.1152 10.1339 13.1152 14M20.1336 7.00037L0 7" stroke="currentColor"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TESTIMONIAL ========== -->
+    <section class="section-padding">
+        <div class="page-padding">
+            <div class="container">
+                <div class="section-divider"></div>
+                <div class="testimonial-wrapper fade-up">
+                    <div class="signpost" style="justify-content: center;">
+                        <span class="signpost-text">Kundenstimmen</span>
+                        <div class="signpost-line"></div>
+                    </div>
+                    <p class="testimonial-quote">"Ich fühle mich nach jeder Behandlung bei Daniela wie neu geboren. Die Ergebnisse sind absolut sichtbar und die Atmosphäre ist unvergleichlich. Das beste Kosmetikstudio, das ich je besucht habe."</p>
+                    <p class="testimonial-author">Zufriedene Kundin</p>
+                </div>
+                <div class="section-divider"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CTA ========== -->
+    <section class="cta-section">
+        <img src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?auto=format&fit=crop&q=80&w=1920" alt="Kosmetikbehandlung Atmosphäre" class="cta-bg">
+        <div class="cta-overlay"></div>
+        <div class="cta-content fade-up">
+            <div class="signpost" style="justify-content: center;">
+                <span class="signpost-text" style="color: var(--clr-bg);">Termin buchen</span>
+                <div class="signpost-line" style="background: var(--clr-bg);"></div>
+            </div>
+            <h2><em>Buchen Sie Ihren</em> exklusiven Termin.</h2>
+            <p>Erleben Sie Kosmetik auf höchstem Niveau. Kontaktieren Sie uns noch heute für Ihre persönliche Beratung.</p>
+            <a href="kontakt.html" class="btn">Jetzt Termin vereinbaren</a>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="page-padding">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <div class="signpost">
+                            <span class="signpost-text">Kontakt</span>
+                            <div class="signpost-line"></div>
+                        </div>
+                        <p class="footer-info">Für Buchungen und Anfragen<br>kontaktieren Sie uns gerne.</p>
+                        <a href="mailto:info@all-in-one-beauty.ch" class="footer-text-link">E: info@all-in-one-beauty.ch</a><br>
+                        <a href="https://wa.me/41000000000" target="_blank" class="footer-text-link">WhatsApp: Jetzt schreiben</a>
+                        <div class="social-links">
+                            <a href="#" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <div class="signpost">
+                            <span class="signpost-text">Studio</span>
+                            <div class="signpost-line"></div>
+                        </div>
+                        <p class="footer-info">All in one Beauty<br>Schweiz<br><br>Termine nach Vereinbarung</p>
+                    </div>
+                    <div class="footer-col">
+                        <div class="signpost">
+                            <span class="signpost-text">Links</span>
+                            <div class="signpost-line"></div>
+                        </div>
+                        <a href="index.html" class="footer-text-link">Home</a><br>
+                        <a href="behandlungen.html" class="footer-text-link">Behandlungen</a><br>
+                        <a href="ueber-mich.html" class="footer-text-link">Über Daniela</a><br>
+                        <a href="kontakt.html" class="footer-text-link">Kontakt & Buchung</a>
+                    </div>
+                    <div class="footer-col">
+                        <div class="signpost">
+                            <span class="signpost-text">Newsletter</span>
+                            <div class="signpost-line"></div>
+                        </div>
+                        <p class="footer-info">Erhalten Sie exklusive Angebote und Neuigkeiten direkt in Ihr Postfach.</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="footer-copyright">© <span class="current-year">2026</span> All in one Beauty by Daniela. Alle Rechte vorbehalten.</div>
+                    <div class="footer-legal">
+                        <a href="#">Impressum</a>
+                        <a href="#">Datenschutz</a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="main.js"></script>
 </body>
 </html>
