@@ -1,0 +1,524 @@
+:root {
+    /* Color Palette: Dark Opulence */
+    --clr-bg: #0a0a0a;
+    --clr-bg-alt: #121212;
+    --clr-bg-card: #1a1a1a;
+    --clr-accent: #d4af37; /* Muted Champagne Gold */
+    --clr-accent-dark: #b5952f;
+    --clr-text: #f4f4f4;
+    --clr-text-muted: #a0a0a0;
+    --clr-border: rgba(212, 175, 55, 0.3);
+
+    /* Typography */
+    --font-heading: 'Cormorant Garamond', serif;
+    --font-body: 'Jost', sans-serif;
+
+    /* Spacing */
+    --space-sm: 0.5rem;
+    --space-md: 1.5rem;
+    --space-lg: 3rem;
+    --space-xl: 6rem;
+    --space-xxl: 10rem;
+    
+    /* Transitions */
+    --trans-fast: 0.2s ease;
+    --trans-smooth: 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--clr-bg);
+    color: var(--clr-text);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Typography Classes */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: var(--space-md);
+    color: var(--clr-accent);
+}
+
+h1 {
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    letter-spacing: 0.02em;
+}
+
+h3 {
+    font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+    color: var(--clr-text);
+}
+
+p {
+    margin-bottom: var(--space-md);
+    font-size: 1.125rem;
+    color: var(--clr-text-muted);
+}
+
+a {
+    color: var(--clr-text);
+    text-decoration: none;
+    transition: var(--trans-fast);
+}
+
+/* Base Layout & Utilities */
+.container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.section {
+    padding: var(--space-xxl) 0;
+}
+
+.flex { display: flex; }
+.grid { display: grid; }
+.text-center { text-align: center; }
+
+/* Header & Nav */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: var(--space-md) 0;
+    transition: var(--trans-smooth);
+    background: transparent;
+}
+
+.header.scrolled {
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    padding: var(--space-sm) 0;
+    border-bottom: 1px solid var(--clr-border);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+    filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.2));
+    transition: var(--trans-smooth);
+}
+
+.header.scrolled .logo img {
+    height: 45px;
+}
+
+.nav-links {
+    display: flex;
+    gap: var(--space-lg);
+    align-items: center;
+}
+
+.nav-links a {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--clr-accent);
+    transition: var(--trans-fast);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--clr-accent);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    cursor: pointer;
+    transition: var(--trans-smooth);
+    border: 1px solid var(--clr-accent);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-primary {
+    background: var(--clr-accent);
+    color: var(--clr-bg);
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--clr-accent-dark);
+    transition: var(--trans-smooth);
+    z-index: -1;
+}
+
+.btn-primary:hover::before {
+    left: 0;
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--clr-accent);
+}
+
+.btn-outline:hover {
+    background: var(--clr-accent);
+    color: var(--clr-bg);
+}
+
+/* Floating Action Button (Booking) */
+.fab {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--clr-accent);
+    color: var(--clr-bg);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: var(--trans-smooth);
+}
+
+.fab:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.5);
+    background: var(--clr-accent-dark);
+}
+
+/* Animations */
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-top: 80px;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, #0a0a0a 40%, transparent), url('https://www.all-in-one-beauty.ch/wp-content/uploads/IMG_0017-300x300.jpeg');
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+    opacity: 0.4;
+    z-index: -1;
+    /* Soften the image and make it look premium */
+    filter: grayscale(30%) contrast(110%);
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-subtitle {
+    font-family: var(--font-body);
+    color: var(--clr-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+/* Sections Structure */
+.section-header {
+    margin-bottom: var(--space-xl);
+}
+
+.section-subtitle {
+    font-family: var(--font-body);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--clr-text-muted);
+    font-size: 0.85rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+/* Service Cards */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--space-lg);
+}
+
+.service-card {
+    background: var(--clr-bg-card);
+    padding: var(--space-lg);
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: var(--trans-smooth);
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--clr-accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--trans-smooth);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--clr-border);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.service-card:hover::before {
+    transform: scaleX(1);
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    color: var(--clr-accent);
+    margin-bottom: 1.5rem;
+}
+
+.service-title {
+    font-size: 1.8rem;
+}
+
+.service-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--clr-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.service-link i {
+    margin-left: 5px;
+    transition: var(--trans-fast);
+}
+
+.service-card:hover .service-link i {
+    transform: translateX(5px);
+}
+
+/* About Section */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    align-items: center;
+}
+
+.about-image {
+    position: relative;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    filter: grayscale(20%);
+    border-radius: 2px;
+}
+
+.about-image::after {
+    content: '';
+    position: absolute;
+    border: 1px solid var(--clr-accent);
+    width: 100%;
+    height: 100%;
+    top: -20px;
+    left: 20px;
+    z-index: -1;
+}
+
+/* Footer */
+.footer {
+    background: var(--clr-bg-alt);
+    padding: var(--space-xl) 0 var(--space-md);
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-lg);
+    margin-bottom: var(--space-lg);
+}
+
+.footer h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer p {
+    font-size: 0.95rem;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+    color: var(--clr-text-muted);
+}
+
+.footer-links a:hover {
+    color: var(--clr-accent);
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-links a {
+    color: var(--clr-text);
+    font-size: 1.5rem;
+}
+
+.social-links a:hover {
+    color: var(--clr-accent);
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding-top: var(--space-md);
+    color: var(--clr-text-muted);
+    font-size: 0.85rem;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-image {
+        margin: 0 auto var(--space-lg);
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 80px; /* Adjust according to header height */
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 80px); /* Height below header */
+        background: rgba(10, 10, 10, 0.98);
+        backdrop-filter: blur(15px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: var(--space-lg);
+        transform: translateX(100%);
+        transition: transform var(--trans-smooth);
+        /* hide borders */
+        border: none;
+    }
+    
+    .nav-links.active {
+        transform: translateX(0);
+    }
+    
+    .hero-bg {
+        background-image: linear-gradient(to bottom, #0a0a0a 30%, transparent), url('https://www.all-in-one-beauty.ch/wp-content/uploads/IMG_0017-300x300.jpeg');
+        background-position: center top;
+    }
+
+    .fab {
+        bottom: 20px;
+        right: 20px;
+        padding: 0.8rem 1.5rem;
+        font-size: 0.8rem;
+    }
+}

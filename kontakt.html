@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt & Termin | All in one Beauty Kosmetikstudio</title>
+    <meta name="description" content="Sichern Sie sich Ihren exklusiven Termin bei All in one Beauty Schweiz. Buchen Sie online, kontaktieren Sie uns via WhatsApp oder besuchen Sie uns vor Ort.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .page-header {
+            padding: 180px 0 100px;
+            text-align: center;
+            background: linear-gradient(to bottom, var(--clr-bg), var(--clr-bg-alt));
+            border-bottom: 1px solid var(--clr-border);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-xl);
+            margin-top: -50px; /* pull up into header slightly */
+            position: relative;
+            z-index: 10;
+        }
+
+        .contact-card {
+            background: var(--clr-bg-card);
+            padding: var(--space-xl) var(--space-lg);
+            border: 1px solid var(--clr-border);
+            text-align: center;
+            transition: var(--trans-smooth);
+        }
+
+        .contact-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+            border-color: var(--clr-accent);
+        }
+
+        .contact-icon {
+            font-size: 3.5rem;
+            color: var(--clr-accent);
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .contact-info {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--clr-text);
+        }
+
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 3rem;
+        }
+
+        .social-card {
+            background: var(--clr-bg-alt);
+            padding: 2rem 1rem;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .social-card i {
+            font-size: 2.5rem;
+            color: var(--clr-accent);
+        }
+
+        .social-card span {
+            font-family: var(--font-body);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.85rem;
+        }
+
+        .social-card:hover {
+            background: rgba(212, 175, 55, 0.1);
+            border-color: var(--clr-accent);
+            color: var(--clr-text);
+        }
+
+        @media (max-width: 992px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="https://www.all-in-one-beauty.ch/wp-content/uploads/logo-neu-Kopie-1.png" alt="All in one Beauty Logo">
+            </a>
+            <button class="nav-toggle" aria-label="Menu öffnen">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="behandlungen.html">Behandlungen</a>
+                <a href="ueber-mich.html">Über mich</a>
+                <a href="kontakt.html" class="active">Kontakt</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header fade-up">
+        <div class="container">
+            <span class="section-subtitle">Wir freuen uns auf Sie</span>
+            <h1>Termin & Kontakt</h1>
+            <p>Sichern Sie sich Ihren exklusiven Veröhn-Termin oder kontaktieren Sie uns für eine unverbindliche Beratung.</p>
+        </div>
+    </section>
+
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <div class="contact-grid">
+                
+                <!-- Booking Card -->
+                <div class="contact-card fade-up">
+                    <i class="fa-solid fa-calendar-alt contact-icon"></i>
+                    <h2>Termin Buchen</h2>
+                    <p class="contact-info">Unser Terminbuchungssystem ist 24/7 für Sie geöffnet. Buchen Sie Ihre Wunschbehandlung einfach online.</p>
+                    <a href="#" class="btn btn-primary" style="width: 100%;">Jetzt Termin vereinbaren</a>
+                </div>
+
+                <!-- WhatsApp Card -->
+                <div class="contact-card fade-up" style="transition-delay: 0.1s;">
+                    <i class="fa-brands fa-whatsapp contact-icon"></i>
+                    <h2>WhatsApp</h2>
+                    <p class="contact-info">Sie haben direkte Fragen an Daniela? Schreiben Sie uns unkompliziert via WhatsApp. Wir antworten umgehend.</p>
+                    <a href="https://wa.me/41000000000" target="_blank" class="btn btn-outline" style="width: 100%;">Chat starten</a>
+                </div>
+
+            </div>
+
+            <!-- Additional Contact & Socials -->
+            <div class="fade-up" style="margin-top: var(--space-xl);">
+                <div class="text-center" style="margin-bottom: var(--space-lg);">
+                    <h2>Connect & Follow</h2>
+                    <p>Bleiben Sie informiert über neue Behandlungen, Angebote und Vorher/Nachher-Resultate.</p>
+                </div>
+
+                <div class="social-grid">
+                    <a href="#" target="_blank" class="social-card">
+                        <i class="fa-brands fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+                    <a href="#" target="_blank" class="social-card">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <span>Facebook</span>
+                    </a>
+                    <a href="mailto:info@all-in-one-beauty.ch" class="social-card">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>E-Mail</span>
+                    </a>
+                    <a href="#" target="_blank" class="social-card">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                        <span>Route</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container fade-up">
+            <div class="footer-grid">
+                <div>
+                    <h4>All in one Beauty</h4>
+                    <p>Premium Kosmetik & Anti-Aging in der Schweiz. Ihr Zufluchtsort für echte Resultate und tiefgehende Entspannung.</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="behandlungen.html">Behandlungen</a></li>
+                        <li><a href="ueber-mich.html">Über Daniela</a></li>
+                        <li><a href="kontakt.html">Buchung & Kontakt</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Connect</h4>
+                    <div class="social-links" style="margin-bottom: 20px;">
+                        <a href="#" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://wa.me/41000000000" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                    <ul class="footer-links">
+                        <li><a href="mailto:info@all-in-one-beauty.ch"><i class="fa-solid fa-envelope" style="margin-right:10px;"></i>info@all-in-one-beauty.ch</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 All in one Beauty by Daniela. Alle Rechte vorbehalten. | <a href="#" style="color:var(--clr-text-muted);">Impressum</a> | <a href="#" style="color:var(--clr-text-muted);">Datenschutz</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

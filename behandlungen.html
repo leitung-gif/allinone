@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Behandlungen | All in one Beauty Kosmetikstudio</title>
+    <meta name="description" content="Entdecken Sie unsere exklusiven Behandlungen. Von tiefenwirksamem Anti-Aging und Microneedling bis hin zu perfekten Wimpern. All in one Beauty von Daniela.">
+    <meta name="keywords" content="Microneedling Schweiz, Gesichtsbehandlung, Kosmetik, BB Glow, Wimpernlifting, Dauerhafte Haarentfernung">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+    <!-- Inline styles specifically for treatments layout -->
+    <style>
+        .page-header {
+            padding: 180px 0 100px;
+            text-align: center;
+            background: linear-gradient(to bottom, var(--clr-bg), var(--clr-bg-alt));
+            border-bottom: 1px solid var(--clr-border);
+        }
+
+        .treatment-layer {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-xl);
+            align-items: center;
+            margin-bottom: var(--space-xxl);
+        }
+
+        .treatment-layer:nth-child(even) {
+            direction: rtl; /* simple way to reverse layout */
+        }
+
+        .treatment-layer:nth-child(even) .layer-content {
+            direction: ltr;
+        }
+
+        .layer-img {
+            position: relative;
+            padding: 2rem;
+        }
+
+        .layer-img img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            filter: grayscale(15%) contrast(110%);
+        }
+
+        .layer-img::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 80%;
+            height: 80%;
+            border: 1px solid var(--clr-accent);
+            z-index: -1;
+        }
+
+        .layer-content {
+            padding: var(--space-lg);
+            background: var(--clr-bg-card);
+            border-left: 3px solid var(--clr-accent);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+        }
+
+        .treatment-layer:nth-child(even) .layer-content {
+            border-left: none;
+            border-right: 3px solid var(--clr-accent);
+        }
+
+        .layer-title {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .price-list {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .price-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px dashed rgba(255,255,255,0.1);
+            padding: 0.8rem 0;
+            font-family: var(--font-body);
+        }
+
+        .price-name {
+            font-size: 1rem;
+            color: var(--clr-text);
+        }
+
+        .price-val {
+            color: var(--clr-accent);
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .cta-box {
+            background: linear-gradient(45deg, var(--clr-bg-card), var(--clr-bg-alt));
+            padding: var(--space-xl);
+            text-align: center;
+            border: 1px solid var(--clr-border);
+            margin: var(--space-xxl) 0;
+        }
+
+        @media (max-width: 992px) {
+            .treatment-layer {
+                grid-template-columns: 1fr;
+                gap: var(--space-lg);
+            }
+            .treatment-layer:nth-child(even) { direction: ltr; }
+            .layer-img { padding: 1rem; }
+            .layer-img::before { width: 100%; height: 100%; top: -10px; left: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="https://www.all-in-one-beauty.ch/wp-content/uploads/logo-neu-Kopie-1.png" alt="All in one Beauty Logo">
+            </a>
+            <button class="nav-toggle" aria-label="Menu öffnen">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="behandlungen.html" class="active">Behandlungen</a>
+                <a href="ueber-mich.html">Über mich</a>
+                <a href="kontakt.html">Kontakt</a>
+            </nav>
+        </div>
+    </header>
+
+    <a href="kontakt.html" class="fab">
+        Termin <i class="fa-solid fa-calendar-check"></i>
+    </a>
+
+    <!-- Page Header -->
+    <section class="page-header fade-up">
+        <div class="container">
+            <span class="section-subtitle">Ihr Verwöhn-Menü</span>
+            <h1>Signature Behandlungen</h1>
+            <p style="max-width: 600px; margin: 0 auto;">Tauchen Sie ein in eine Welt der Erholung. Unsere hochwirksamen Kosmetikbehandlungen sind individuell auf die Bedürfnisse Iher Haut abgestimmt.</p>
+        </div>
+    </section>
+
+    <!-- Treatments Content -->
+    <section class="section">
+        <div class="container">
+
+            <!-- Treatment Layer 1 -->
+            <div class="treatment-layer fade-up">
+                <div class="layer-img">
+                    <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&q=80&w=800" alt="Gesichtsbehandlung">
+                </div>
+                <div class="layer-content">
+                    <h2 class="layer-title">Gesichtspflege & Anti-Aging</h2>
+                    <p>Die Basis wahrer Schönheit. Von der porentiefen Reinigung bis zur intensiven Faltenreduktion. Wir nutzen ausschließlich Premium-Produkte.</p>
+                    <ul class="price-list">
+                        <li class="price-item">
+                            <span class="price-name">Classic Hydration Facial (60 Min)</span>
+                            <span class="price-val">ab CHF 120.-</span>
+                        </li>
+                        <li class="price-item">
+                            <span class="price-name">Deep Cleanse & Detox (75 Min)</span>
+                            <span class="price-val">ab CHF 145.-</span>
+                        </li>
+                        <li class="price-item">
+                            <span class="price-name">Premium Anti-Aging Complex (90 Min)</span>
+                            <span class="price-val">ab CHF 180.-</span>
+                        </li>
+                    </ul>
+                    <a href="kontakt.html" class="btn btn-outline" style="margin-top: 1.5rem; width: 100%; text-align: center;">Anfragen</a>
+                </div>
+            </div>
+
+            <!-- Treatment Layer 2 -->
+            <div class="treatment-layer fade-up">
+                <div class="layer-img">
+                    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=800" alt="Microneedling & BB Glow">
+                </div>
+                <div class="layer-content">
+                    <h2 class="layer-title">Microneedling & BB Glow</h2>
+                    <p>Revolutionäre Techniken für ein makelloses Hautbild. Reduziert Narben, Pigmentflecken und sorgt für den ultimativen Glow.</p>
+                    <ul class="price-list">
+                        <li class="price-item">
+                            <span class="price-name">Microneedling Gesicht & Hals</span>
+                            <span class="price-val">ab CHF 160.-</span>
+                        </li>
+                        <li class="price-item">
+                            <span class="price-name">BB Glow Treatment</span>
+                            <span class="price-val">ab CHF 140.-</span>
+                        </li>
+                    </ul>
+                    <a href="kontakt.html" class="btn btn-outline" style="margin-top: 1.5rem; width: 100%; text-align: center;">Anfragen</a>
+                </div>
+            </div>
+
+            <!-- Treatment Layer 3 -->
+            <div class="treatment-layer fade-up">
+                <div class="layer-img">
+                    <img src="https://images.unsplash.com/photo-1512496015851-a1fbcf69d39e?auto=format&fit=crop&q=80&w=800" alt="Wimpern und Brauen">
+                </div>
+                <div class="layer-content">
+                    <h2 class="layer-title">Lashes & Brows</h2>
+                    <p>Ein ausdrucksstarker Blick sagt mehr als tausend Worte. Perfekt geformte Brauen und schwungvolle Wimpern ohne tägliches Schminken.</p>
+                    <ul class="price-list">
+                        <li class="price-item">
+                            <span class="price-name">Lash Lifting inkl. Färben</span>
+                            <span class="price-val">ab CHF 90.-</span>
+                        </li>
+                        <li class="price-item">
+                            <span class="price-name">Brow Lifting & Styling</span>
+                            <span class="price-val">ab CHF 80.-</span>
+                        </li>
+                        <li class="price-item">
+                            <span class="price-name">Wimpernverlängerung (Classic/Volumen)</span>
+                            <span class="price-val">ab CHF 130.-</span>
+                        </li>
+                    </ul>
+                    <a href="kontakt.html" class="btn btn-outline" style="margin-top: 1.5rem; width: 100%; text-align: center;">Anfragen</a>
+                </div>
+            </div>
+
+            <!-- Pre Footer CTA -->
+            <div class="cta-box fade-up">
+                <h2 style="margin-bottom: 0.5rem;">Unsicher welche Behandlung passt?</h2>
+                <p style="margin-bottom: 2rem;">Lassen Sie sich bei uns vor Ort unverbindlich beraten. Eine professionelle Hautanalyse deckt die Bedürfnisse Ihrer Haut exakt auf.</p>
+                <a href="kontakt.html" class="btn btn-primary">Kostenlose Beratung buchen</a>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <!-- Content same as index -->
+        <div class="container fade-up">
+            <div class="footer-grid">
+                <div>
+                    <h4>All in one Beauty</h4>
+                    <p>Premium Kosmetik & Anti-Aging in der Schweiz. Ihr Zufluchtsort für echte Resultate und tiefgehende Entspannung.</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="behandlungen.html">Behandlungen</a></li>
+                        <li><a href="ueber-mich.html">Über Daniela</a></li>
+                        <li><a href="kontakt.html">Buchung & Kontakt</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Connect</h4>
+                    <div class="social-links" style="margin-bottom: 20px;">
+                        <a href="#" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                    <ul class="footer-links">
+                        <li><a href="mailto:info@all-in-one-beauty.ch"><i class="fa-solid fa-envelope" style="margin-right:10px;"></i>info@all-in-one-beauty.ch</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 All in one Beauty by Daniela. Alle Rechte vorbehalten. | <a href="#" style="color:var(--clr-text-muted);">Impressum</a> | <a href="#" style="color:var(--clr-text-muted);">Datenschutz</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
