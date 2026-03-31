@@ -1416,7 +1416,7 @@ a {
 .fade-up[data-delay="3"] { transition-delay: 0.45s; }
 
 /* ============================================================
-   RESPONSIVE
+   RESPONSIVE — TABLET (max 992px)
    ============================================================ */
 @media (max-width: 992px) {
     .nav-toggle { display: block; }
@@ -1510,21 +1510,264 @@ a {
     .trust-inner {
         gap: var(--space-md);
     }
-}
 
-@media (max-width: 600px) {
-    .footer-grid {
-        grid-template-columns: 1fr;
+    .about-img-col {
+        padding: var(--space-lg);
     }
 
+    .about-img-col img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* ============================================================
+   RESPONSIVE — MOBILE (max 600px)
+   ============================================================ */
+@media (max-width: 600px) {
+
+    /* ---- HERO FIX (3 merged images bug) ---- */
+    .hero {
+        min-height: 100vh;
+        min-height: 100svh;
+    }
+
+    .hero-img {
+        object-position: center center;
+    }
+
+    .hero-overlay {
+        background: linear-gradient(
+            to top,
+            rgba(255,252,245,0.97) 0%,
+            rgba(255,252,245,0.85) 25%,
+            rgba(255,252,245,0.3) 60%,
+            transparent 100%
+        );
+    }
+
+    .hero-logo {
+        max-width: 140px;
+        margin-bottom: 1rem;
+    }
+
+    .hero h1 {
+        font-size: clamp(2rem, 8vw, 3rem);
+    }
+
+    .hero-subtitle {
+        font-size: 0.6rem;
+        letter-spacing: 0.08em;
+        line-height: 1.6;
+    }
+
+    .hero-btns {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .btn-hero {
+        width: 100%;
+        justify-content: center;
+        padding: 1rem 1.5rem;
+    }
+
+    .hero-arrow-link {
+        justify-content: center;
+    }
+
+    .hero-content {
+        padding-bottom: var(--space-lg);
+    }
+
+    /* ---- HEADER ---- */
     .header-topbar {
         display: none;
     }
 
-    .hero {
-        min-height: 85vh;
+    .nav-container {
+        padding: 0.75rem 0;
     }
 
+    .logo img {
+        height: 38px;
+    }
+
+    /* ---- QUICK BOOK BAR ---- */
+    .quick-book-inner {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .quick-book-actions {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .quick-book-btn {
+        flex: 1;
+        justify-content: center;
+        min-width: 0;
+        padding: 0.6rem 0.75rem;
+        font-size: 0.6rem;
+    }
+
+    /* ---- TRUST STRIP ---- */
+    .trust-strip {
+        padding: var(--space-md) 0;
+    }
+
+    .trust-inner {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .trust-item {
+        width: 100%;
+        flex-direction: row;
+        gap: 1rem;
+        text-align: left;
+        padding: 0.75rem 0;
+        border-bottom: 1px solid var(--clr-border-light);
+    }
+
+    .trust-item:last-child {
+        border-bottom: none;
+    }
+
+    .trust-logo {
+        height: 30px;
+        flex-shrink: 0;
+    }
+
+    .trust-logo-srf { height: 22px; }
+    .trust-logo-cert { height: 36px; }
+
+    .trust-badge {
+        width: 36px;
+        height: 36px;
+        font-size: 0.65rem;
+    }
+
+    .trust-divider {
+        display: none;
+    }
+
+    /* ---- MARQUEE ---- */
+    .marquee-item {
+        font-size: clamp(1rem, 4vw, 1.5rem);
+        padding: 0 1rem;
+    }
+
+    /* ---- SERVICES GRID ---- */
+    .range-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .range-item {
+        border-right: none;
+        border-bottom: 1px solid var(--clr-border-light);
+        min-height: 280px;
+    }
+
+    /* ---- ABOUT DANIELA ---- */
+    .about-split {
+        grid-template-columns: 1fr;
+    }
+
+    .about-img-col {
+        padding: var(--space-lg) var(--space-md);
+    }
+
+    .about-img-col img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .about-text-col {
+        padding: var(--space-lg) var(--space-md);
+    }
+
+    /* ---- STATS ---- */
+    .stats-strip {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .stat-item {
+        padding: var(--space-md);
+    }
+
+    .stat-number {
+        font-size: clamp(1.8rem, 6vw, 2.5rem);
+    }
+
+    /* ---- STANDORT CARDS ---- */
+    .standort-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .standort-card {
+        padding: var(--space-md);
+    }
+
+    /* ---- CTA ---- */
+    .cta-content {
+        padding: var(--space-md);
+    }
+
+    .cta-actions {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .cta-actions .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* ---- FOOTER CENTERED ---- */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-col .signpost {
+        justify-content: center;
+    }
+
+    .footer-info {
+        text-align: center;
+    }
+
+    .footer-text-link {
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0.75rem;
+    }
+
+    .footer-legal {
+        justify-content: center;
+    }
+
+    /* ---- FAB WIDGET ---- */
     .fab {
         bottom: 1rem;
         right: 1rem;
@@ -1540,28 +1783,26 @@ a {
         padding: 0 1rem 0 0.4rem;
     }
 
+    /* ---- INTRO ---- */
     .intro-grid {
         grid-template-columns: 1fr;
     }
 
-    .range-grid {
-        grid-template-columns: 1fr;
+    /* ---- PAGE HERO (subpages) ---- */
+    .page-hero {
+        padding: 140px 0 50px;
     }
 
-    .range-item {
-        border-right: none;
-        border-bottom: 1px solid var(--clr-border-light);
+    /* ---- TREATMENT BLOCKS ---- */
+    .treatment-text-col {
+        padding: var(--space-md);
     }
 
-    .stats-strip {
-        grid-template-columns: 1fr;
+    .treatment-img-col {
+        min-height: 250px;
     }
 
-    .stat-item {
-        border-right: none;
-        border-bottom: 1px solid var(--clr-border-light);
-    }
-
+    /* ---- SOCIAL GRID ---- */
     .social-grid {
         grid-template-columns: 1fr;
     }
@@ -1571,30 +1812,24 @@ a {
         border-bottom: 1px solid var(--clr-border-light);
     }
 
-    .quick-book-inner {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
+    /* ---- CONTACT GRID ---- */
+    .contact-card {
+        padding: var(--space-md);
     }
 
-    .quick-book-actions {
-        width: 100%;
-        justify-content: center;
+    /* ---- SECTION SPACING ---- */
+    .section-padding {
+        padding-top: var(--space-lg);
+        padding-bottom: var(--space-lg);
     }
 
-    .hero-logo {
-        max-width: 160px;
+    /* ---- TESTIMONIALS ---- */
+    .testimonial-wrapper {
+        padding: var(--space-lg) 0;
     }
 
-    .hero-subtitle {
-        font-size: 0.6875rem;
-    }
-
-    .trust-strip {
-        padding: var(--space-md) 0;
-    }
-
-    .trust-logo-cert {
-        height: 40px;
+    .testimonial-quote {
+        font-size: clamp(1.2rem, 4vw, 1.8rem);
     }
 }
+
