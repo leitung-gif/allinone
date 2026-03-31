@@ -1631,6 +1631,7 @@ a {
         width: 100%;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         gap: 0.6rem;
         text-align: center;
         padding: 0.75rem 0;
@@ -1644,10 +1645,11 @@ a {
     .trust-logo {
         height: 30px;
         flex-shrink: 0;
+        margin: 0 auto;
     }
 
-    .trust-logo-srf { height: 22px; }
-    .trust-logo-cert { height: 36px; }
+    .trust-logo-srf { height: 40px; }
+    .trust-logo-cert { height: 45px; }
 
     .trust-badge {
         width: 36px;
