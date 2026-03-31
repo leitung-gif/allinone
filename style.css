@@ -444,6 +444,234 @@ a {
     gap: 1rem;
     margin-top: var(--space-md);
     flex-wrap: wrap;
+    align-items: center;
+}
+
+/* Hero brand logo */
+.hero-logo {
+    display: block;
+    max-width: 220px;
+    height: auto;
+    margin-bottom: var(--space-md);
+    filter: brightness(0) invert(0);
+    opacity: 0.85;
+}
+
+.hero-subtitle {
+    font-family: var(--font-body);
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--clr-text-muted);
+    max-width: 600px;
+    margin-bottom: 0;
+}
+
+.hero-arrow-link {
+    color: var(--clr-text);
+}
+
+/* Large hero CTA button */
+.btn-hero {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 1.1rem 2.5rem;
+    font-family: var(--font-body);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    background: var(--clr-accent);
+    color: #fff;
+    border: 2px solid var(--clr-accent);
+    cursor: pointer;
+    transition: var(--trans-smooth);
+}
+
+.btn-hero:hover {
+    background: var(--clr-text);
+    border-color: var(--clr-text);
+    color: var(--clr-bg);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(156, 137, 112, 0.3);
+}
+
+.btn-hero i { font-size: 0.875rem; }
+
+/* ============================================================
+   QUICK BOOKING BAR
+   ============================================================ */
+.quick-book-bar {
+    background: var(--clr-text);
+    color: var(--clr-bg);
+    padding: 1.25rem 0;
+    position: relative;
+    z-index: 10;
+}
+
+.quick-book-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.quick-book-label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.quick-book-label i {
+    font-size: 1.125rem;
+    color: var(--clr-accent);
+}
+
+.quick-book-actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.quick-book-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1.25rem;
+    font-family: var(--font-body);
+    font-size: 0.6875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    border: 1px solid rgba(255,252,245,0.25);
+    color: var(--clr-bg);
+    transition: var(--trans-smooth);
+    white-space: nowrap;
+}
+
+.quick-book-btn:hover {
+    background: rgba(255,252,245,0.1);
+    border-color: rgba(255,252,245,0.5);
+}
+
+.quick-book-btn.qb-primary {
+    background: var(--clr-accent);
+    border-color: var(--clr-accent);
+    color: #fff;
+}
+
+.quick-book-btn.qb-primary:hover {
+    background: #b39e85;
+    border-color: #b39e85;
+}
+
+.quick-book-btn i {
+    font-size: 0.875rem;
+}
+
+/* ============================================================
+   TRUST STRIP
+   ============================================================ */
+.trust-strip {
+    border-bottom: 1px solid var(--clr-border-light);
+    padding: var(--space-lg) 0;
+    background:
+        radial-gradient(ellipse at 30% 50%, rgba(156, 137, 112, 0.05), transparent 50%),
+        var(--clr-bg);
+}
+
+.trust-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-lg);
+    flex-wrap: wrap;
+}
+
+.trust-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    text-align: center;
+}
+
+.trust-logo {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: var(--trans-smooth);
+}
+
+.trust-logo-srf { height: 30px; }
+.trust-logo-cert { height: 50px; border-radius: 4px; }
+
+.trust-item:hover .trust-logo {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+.trust-label {
+    font-family: var(--font-body);
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 500;
+    color: var(--clr-text-muted);
+}
+
+.trust-divider {
+    width: 1px;
+    height: 50px;
+    background: var(--clr-border-light);
+}
+
+.trust-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border: 2px solid var(--clr-accent);
+    border-radius: 50%;
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--clr-accent);
+}
+
+/* CTA actions row */
+.cta-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: var(--space-md);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-color: rgba(255,252,245,0.5);
+    color: var(--clr-bg);
+}
+
+.btn-whatsapp:hover {
+    background: #25D366;
+    border-color: #25D366;
+    color: #fff;
 }
 
 /* ============================================================
@@ -1199,6 +1427,19 @@ a {
     }
 
     .social-card:nth-child(2) { border-right: none; }
+
+    .quick-book-inner {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .trust-divider {
+        display: none;
+    }
+
+    .trust-inner {
+        gap: var(--space-md);
+    }
 }
 
 @media (max-width: 600px) {
@@ -1249,5 +1490,32 @@ a {
     .social-card {
         border-right: none;
         border-bottom: 1px solid var(--clr-border-light);
+    }
+
+    .quick-book-inner {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .quick-book-actions {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero-logo {
+        max-width: 160px;
+    }
+
+    .hero-subtitle {
+        font-size: 0.6875rem;
+    }
+
+    .trust-strip {
+        padding: var(--space-md) 0;
+    }
+
+    .trust-logo-cert {
+        height: 40px;
     }
 }
