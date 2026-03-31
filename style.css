@@ -1526,7 +1526,7 @@ a {
    ============================================================ */
 @media (max-width: 600px) {
 
-    /* ---- HERO FIX: separate mobile image ---- */
+    /* ---- HERO: separate mobile image ---- */
     .hero {
         min-height: 100vh;
         min-height: 100svh;
@@ -1534,7 +1534,7 @@ a {
     }
 
     .hero-img {
-        display: none;
+        display: none !important;
     }
 
     .hero-overlay {
@@ -1613,7 +1613,7 @@ a {
         justify-content: center;
         min-width: 0;
         padding: 0.6rem 0.75rem;
-        font-size: 0.6rem;
+        font-size: 0.65rem;
     }
 
     /* ---- TRUST STRIP — CENTERED ---- */
@@ -1624,17 +1624,22 @@ a {
     .trust-inner {
         flex-direction: column;
         align-items: center;
-        gap: 1.5rem;
+        gap: 0;
+    }
+
+    .trust-divider {
+        display: none !important;
     }
 
     .trust-item {
         width: 100%;
+        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 0.6rem;
+        gap: 0.5rem;
         text-align: center;
-        padding: 0.75rem 0;
+        padding: 1.25rem 1rem;
         border-bottom: 1px solid var(--clr-border-light);
     }
 
@@ -1642,23 +1647,41 @@ a {
         border-bottom: none;
     }
 
-    .trust-logo {
-        height: 30px;
-        flex-shrink: 0;
+    /* SRF logo: crop to show only the red SRF box,
+       the image is ~4x wider than the box because of invisible text */
+    .trust-logo-srf {
+        height: 44px !important;
+        width: auto;
+        max-width: 56px;
+        object-fit: cover;
+        object-position: left center;
+        display: block;
         margin: 0 auto;
     }
 
-    .trust-logo-srf { height: 40px; }
-    .trust-logo-cert { height: 45px; }
-
-    .trust-badge {
-        width: 36px;
-        height: 36px;
-        font-size: 0.65rem;
+    .trust-logo-cert {
+        height: 50px !important;
+        display: block;
+        margin: 0 auto;
+        object-fit: contain;
     }
 
-    .trust-divider {
-        display: none;
+    .trust-logo {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .trust-badge {
+        width: 42px;
+        height: 42px;
+        font-size: 0.7rem;
+        margin: 0 auto;
+    }
+
+    .trust-label {
+        display: block;
+        width: 100%;
+        text-align: center;
     }
 
     /* ---- MARQUEE ---- */
@@ -1754,6 +1777,7 @@ a {
     }
 
     .footer-text-link {
+        display: block;
         text-align: center;
     }
 
@@ -1837,4 +1861,3 @@ a {
         font-size: clamp(1.2rem, 4vw, 1.8rem);
     }
 }
-
