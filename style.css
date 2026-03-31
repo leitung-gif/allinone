@@ -1526,22 +1526,24 @@ a {
    ============================================================ */
 @media (max-width: 600px) {
 
-    /* ---- HERO FIX (3 merged images bug) ---- */
+    /* ---- HERO FIX: separate mobile image ---- */
     .hero {
         min-height: 100vh;
         min-height: 100svh;
+        background: url('images/hero-mobile.png') center/cover no-repeat;
     }
 
     .hero-img {
-        object-position: center center;
+        display: none;
     }
 
     .hero-overlay {
         background: linear-gradient(
             to top,
             rgba(255,252,245,0.97) 0%,
-            rgba(255,252,245,0.85) 25%,
-            rgba(255,252,245,0.3) 60%,
+            rgba(255,252,245,0.88) 30%,
+            rgba(255,252,245,0.4) 60%,
+            rgba(255,252,245,0.15) 80%,
             transparent 100%
         );
     }
@@ -1614,7 +1616,7 @@ a {
         font-size: 0.6rem;
     }
 
-    /* ---- TRUST STRIP ---- */
+    /* ---- TRUST STRIP — CENTERED ---- */
     .trust-strip {
         padding: var(--space-md) 0;
     }
@@ -1627,9 +1629,10 @@ a {
 
     .trust-item {
         width: 100%;
-        flex-direction: row;
-        gap: 1rem;
-        text-align: left;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.6rem;
+        text-align: center;
         padding: 0.75rem 0;
         border-bottom: 1px solid var(--clr-border-light);
     }
