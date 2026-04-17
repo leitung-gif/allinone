@@ -45,4 +45,42 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.current-year').forEach(el => {
         el.textContent = new Date().getFullYear();
     });
+
+    // 5. Cookie Consent
+    const cookieBanner = document.querySelector('.cookie-consent');
+    const acceptBtn = document.querySelector('.cookie-accept');
+    const declineBtn = document.querySelector('.cookie-decline');
+
+    if (cookieBanner) {
+        // Show banner if no consent stored
+        if (!localStorage.getItem('aio_cookie_consent')) {
+            cookieBanner.style.display = 'flex';
+        }
+
+        if (acceptBtn) {
+            acceptBtn.addEventListener('click', () => {
+                localStorage.setItem('aio_cookie_consent', 'accepted');
+                cookieBanner.style.display = 'none';
+            });
+        }
+
+        if (declineBtn) {
+            declineBtn.addEventListener('click', () => {
+                localStorage.setItem('aio_cookie_consent', 'declined');
+                cookieBanner.style.display = 'none';
+            });
+        }
+    }
+
+    // 6. Skip-link focus fix
+    const skipLink = document.querySelector('.skip-link');
+    if (skipLink) {
+        skipLink.addEventListener('click', (e) => {
+            const target = document.querySelector(skipLink.getAttribute('href'));
+            if (target) {
+                target.setAttribute('tabindex', '-1');
+                target.focus();
+            }
+        });
+    }
 });
