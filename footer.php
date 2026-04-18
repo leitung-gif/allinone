@@ -35,7 +35,7 @@
                         <a href="https://www.all-in-one-beauty.ch/shop/gutschein-2/" target="_blank" rel="noopener" class="footer-text-link">Gutschein kaufen</a>
                     </div>
                 </div>
-                <div class="footer-credit" style="text-align:center;padding:0.75rem 0;font-size:0.7rem;color:var(--clr-text-muted);letter-spacing:0.08em;text-transform:uppercase;">Made by <a href="https://www.loriengroup.ch/" target="_blank" rel="noopener" style="color:var(--clr-accent);">Lorien Group</a></div>
+                <div class="footer-credit" style="text-align:center;padding:0.75rem 0;font-size:0.7rem;color:var(--clr-text-muted);letter-spacing:0.08em;text-transform:uppercase;">Made by <a href="https://www.lorien.group/" target="_blank" rel="noopener" style="color:var(--clr-accent);">Lorien Group</a></div>
                 <div class="footer-bottom">
                     <div class="footer-copyright">&copy; <?php echo date( 'Y' ); ?> All in one Beauty by Daniela. Alle Rechte vorbehalten.</div>
                     <div class="footer-legal">
