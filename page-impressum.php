@@ -49,7 +49,7 @@ get_header();
                 <p>Die Urheber- und alle anderen Rechte an Inhalten, Bildern, Fotos oder anderen Dateien auf der Website gehören ausschliesslich All in one Beauty by Daniela oder den speziell genannten Rechtsinhabern. Für die Reproduktion jeglicher Elemente ist die schriftliche Zustimmung der Urheberrechtsträger im Voraus einzuholen.</p>
 
                 <h3>Webdesign &amp; Entwicklung</h3>
-                <p><a href="https://www.loriengroup.ch/" target="_blank" rel="noopener">Lorien Group</a><br>
+                <p><a href="https://www.lorien.group/" target="_blank" rel="noopener">Lorien Group</a><br>
                 Schweiz</p>
 
                 <div style="margin-top: var(--space-lg); padding-top: var(--space-md); border-top: 1px solid var(--clr-border-light);">
