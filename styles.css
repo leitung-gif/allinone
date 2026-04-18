@@ -752,6 +752,7 @@ a {
 .btn-whatsapp {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
     border-color: rgba(255,252,245,0.5);
     color: var(--clr-bg);
