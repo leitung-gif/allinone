@@ -30,7 +30,7 @@
                         <a href="<?php echo esc_url( home_url( '/behandlungen/' ) ); ?>" class="nav-link<?php if ( is_page( 'behandlungen' ) ) echo ' active'; ?>">Behandlungen</a>
                         <a href="<?php echo esc_url( home_url( '/ueber-mich/' ) ); ?>" class="nav-link<?php if ( is_page( 'ueber-mich' ) ) echo ' active'; ?>">Über mich</a>
                         <a href="<?php echo esc_url( home_url( '/kontakt/' ) ); ?>" class="nav-link<?php if ( is_page( 'kontakt' ) ) echo ' active'; ?>">Standorte &amp; Kontakt</a>
-                        <a href="https://buchung.treatwell.ch/ort/520140/menue/" target="_blank" rel="noopener" class="btn btn-filled">Termin Buchen</a>
+                        <a href="https://allinone.hairlist.ch/termin" target="_blank" rel="noopener" class="btn btn-filled">Termin Buchen</a>
                     </nav>
                 </div>
             </div>
@@ -38,7 +38,7 @@
     </header>
 
     <!-- Floating Booking Button -->
-    <a href="https://buchung.treatwell.ch/ort/520140/menue/" target="_blank" rel="noopener" class="fab">
+    <a href="https://allinone.hairlist.ch/termin" target="_blank" rel="noopener" class="fab">
         <span class="fab-icon"><i class="fa-solid fa-calendar-check"></i></span>
         <span class="fab-text">Termin Buchen</span>
     </a>

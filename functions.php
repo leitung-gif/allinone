@@ -87,21 +87,21 @@ function aio_beauty_enqueue_assets() {
 }
 add_action( 'wp_enqueue_scripts', 'aio_beauty_enqueue_assets' );
 
-// ─── Treatwell Booking Widget ───
-function aio_beauty_treatwell_widget() {
-    echo '<script src="https://buchung.treatwell.ch/common/venue-menu/javascript/widget-button.js?v1"></script>' . "\n";
-    echo '<script>' . "\n";
-    echo '(function() {' . "\n";
-    echo '  var link = document.createElement("link");' . "\n";
-    echo '  link.type = "text/css";' . "\n";
-    echo '  link.href = "https://buchung.treatwell.ch/common/venue-menu/css/widget-button.css";' . "\n";
-    echo '  link.rel = "stylesheet";' . "\n";
-    echo '  link.media = "screen";' . "\n";
-    echo '  document.getElementsByTagName("head")[0].appendChild(link);' . "\n";
-    echo '}());' . "\n";
-    echo '</script>' . "\n";
-}
-add_action( 'wp_head', 'aio_beauty_treatwell_widget', 99 );
+// ─── Treatwell Booking Widget (DISABLED — Treatwell active from 1. Mai 2025) ───
+// function aio_beauty_treatwell_widget() {
+//     echo '<script src="https://buchung.treatwell.ch/common/venue-menu/javascript/widget-button.js?v1"></script>' . "\n";
+//     echo '<script>' . "\n";
+//     echo '(function() {' . "\n";
+//     echo '  var link = document.createElement("link");' . "\n";
+//     echo '  link.type = "text/css";' . "\n";
+//     echo '  link.href = "https://buchung.treatwell.ch/common/venue-menu/css/widget-button.css";' . "\n";
+//     echo '  link.rel = "stylesheet";' . "\n";
+//     echo '  link.media = "screen";' . "\n";
+//     echo '  document.getElementsByTagName("head")[0].appendChild(link);' . "\n";
+//     echo '}());' . "\n";
+//     echo '</script>' . "\n";
+// }
+// add_action( 'wp_head', 'aio_beauty_treatwell_widget', 99 );
 
 // ─── Preload Critical Assets + GEO Discovery ───
 function aio_beauty_preload_assets() {
@@ -363,7 +363,7 @@ function aio_beauty_structured_data() {
                 array( '@type' => 'Question', 'name' => 'Was kostet eine Wimpernverlängerung bei All in one Beauty?', 'acceptedAnswer' => array( '@type' => 'Answer', 'text' => 'Eine Neuanlage Full Set kostet CHF 149.–. Auffüllen je nach Zeitraum zwischen CHF 59.– und CHF 119.–. Wir bieten Classic, Volume und Mega Volume in unseren Salons in Gränichen und Suhr an.' ) ),
                 array( '@type' => 'Question', 'name' => 'Bietet All in one Beauty Permanent Make-Up an?', 'acceptedAnswer' => array( '@type' => 'Answer', 'text' => 'Ja, wir bieten professionelles Permanent Make-Up und Microblading für Augenbrauen (ab CHF 185.–), Lippenkontur (ab CHF 180.–) und Lidstriche (ab CHF 130.–) in Gränichen und Suhr an.' ) ),
                 array( '@type' => 'Question', 'name' => 'Wo befinden sich die All in one Beauty Salons?', 'acceptedAnswer' => array( '@type' => 'Answer', 'text' => 'Wir haben zwei Standorte: Den Hauptsalon in Gränichen (Mo-Fr 08:00-20:00, Sa 08:00-18:00) und einen zweiten Salon in Suhr (Mo-Fr 08:30-19:30, Sa 08:00-17:30) im Kanton Aargau.' ) ),
-                array( '@type' => 'Question', 'name' => 'Wie kann ich einen Termin buchen?', 'acceptedAnswer' => array( '@type' => 'Answer', 'text' => 'Sie können online über Treatwell buchen, per WhatsApp unter 076 503 66 63 schreiben oder uns telefonisch erreichen. Alle Buchungswege sind 24/7 verfügbar.' ) ),
+                array( '@type' => 'Question', 'name' => 'Wie kann ich einen Termin buchen?', 'acceptedAnswer' => array( '@type' => 'Answer', 'text' => 'Sie können online über unser Buchungssystem buchen, per WhatsApp unter 076 503 66 63 schreiben oder uns telefonisch erreichen. Alle Buchungswege sind 24/7 verfügbar.' ) ),
             ),
         );
         echo '<script type="application/ld+json">' . wp_json_encode( $faq, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE ) . '</script>' . "\n";

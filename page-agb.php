@@ -25,7 +25,7 @@ get_header();
 
                 <h2>2. Terminvereinbarung und Stornierung</h2>
                 <h3>2.1 Terminbuchung</h3>
-                <p>Termine können über unser Online-Buchungssystem (Treatwell), per WhatsApp unter 076 503 66 63, per E-Mail an info@all-in-one-beauty.ch oder telefonisch vereinbart werden.</p>
+                <p>Termine können über unser Online-Buchungssystem, per WhatsApp unter 076 503 66 63, per E-Mail an info@all-in-one-beauty.ch oder telefonisch vereinbart werden.</p>
 
                 <h3>2.2 Absage und Verschiebung</h3>
                 <p>Wir bitten Sie, Termine mindestens <strong>24 Stunden</strong> vor dem vereinbarten Zeitpunkt abzusagen oder zu verschieben. Bei Nichterscheinen oder kurzfristigen Absagen (weniger als 24 Stunden) behalten wir uns vor, den vollen Behandlungspreis in Rechnung zu stellen.</p>

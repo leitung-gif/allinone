@@ -51,8 +51,8 @@ get_header();
                 </ul>
 
                 <h2>6. Externe Dienste</h2>
-                <h3>6.1 Treatwell (Buchungssystem)</h3>
-                <p>Für die Online-Terminbuchung verwenden wir den Dienst Treatwell. Bitte beachten Sie die <a href="https://www.treatwell.ch/datenschutz/" target="_blank" rel="noopener">Datenschutzerklärung von Treatwell</a>.</p>
+                <h3>6.1 Online-Buchungssystem</h3>
+                <p>Für die Online-Terminbuchung verwenden wir den Dienst Belbo/Hairlist. Bitte beachten Sie die <a href="https://www.belbo.com/datenschutz/" target="_blank" rel="noopener">Datenschutzerklärung von Belbo</a>.</p>
 
                 <h3>6.2 Google Fonts</h3>
                 <p>Diese Website verwendet Google Fonts für die einheitliche Darstellung von Schriftarten. Beim Laden einer Seite werden die erforderlichen Fonts von Google-Servern geladen. Weitere Informationen finden Sie in der <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Datenschutzerklärung von Google</a>.</p>

@@ -8,7 +8,7 @@
                     <div class="footer-col">
                         <div class="signpost"><span class="signpost-text">Buchung &amp; Kontakt</span><div class="signpost-line"></div></div>
                         <p class="footer-info">Für Buchungen und Anfragen<br>kontaktieren Sie uns gerne.</p>
-                        <a href="https://buchung.treatwell.ch/ort/520140/menue/" target="_blank" rel="noopener" class="footer-text-link">Online Termin buchen</a><br>
+                        <a href="https://allinone.hairlist.ch/termin" target="_blank" rel="noopener" class="footer-text-link">Online Termin buchen</a><br>
                         <a href="tel:+41765036663" class="footer-text-link">T: +41 76 503 66 63</a><br>
                         <a href="mailto:info@all-in-one-beauty.ch" class="footer-text-link">E: info@all-in-one-beauty.ch</a>
                         <div class="social-links">
