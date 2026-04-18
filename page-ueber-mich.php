@@ -147,7 +147,7 @@ $t = get_template_directory_uri();
                         <p>Als leidenschaftliche Kosmetik-Unternehmerin ist es mir ein Herzensanliegen, mein Wissen nicht nur in meinen Salons einzusetzen, sondern auch an die nächste Generation weiterzugeben. In der All in one Academy biete ich professionelle Schulungen und Kurse für angehende Kosmetikerinnen und Kosmetiker an.</p>
                         <p>Von Grundlagen in der Wimpernverlängerung über Microblading-Techniken bis hin zu fortgeschrittenen Anti-Aging-Behandlungen – unsere Kurse sind praxisnah, intensiv und bereiten Sie optimal auf eine erfolgreiche Karriere in der Kosmetikbranche vor. Alle Teilnehmerinnen und Teilnehmer erhalten ein Zertifikat und profitieren von meiner persönlichen Mentoring-Begleitung.</p>
                         <div style="margin-top: 1.5rem;">
-                            <a href="https://www.all-in-one-beauty.ch/academy/" target="_blank" rel="noopener" class="btn">Mehr zur Academy</a>
+                            <a href="<?php echo esc_url( home_url( '/kontakt/' ) ); ?>" class="btn">Kontakt aufnehmen</a>
                         </div>
                     </div>
                 </div>

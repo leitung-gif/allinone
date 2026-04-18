@@ -31,7 +31,6 @@
                         <a href="<?php echo esc_url( home_url( '/behandlungen/' ) ); ?>" class="footer-text-link">Behandlungen</a><br>
                         <a href="<?php echo esc_url( home_url( '/ueber-mich/' ) ); ?>" class="footer-text-link">Über Daniela</a><br>
                         <a href="<?php echo esc_url( home_url( '/kontakt/' ) ); ?>" class="footer-text-link">Standorte &amp; Kontakt</a><br>
-                        <a href="https://www.all-in-one-beauty.ch/academy/" target="_blank" rel="noopener" class="footer-text-link">Academy</a><br>
                         <a href="https://www.all-in-one-beauty.ch/shop/gutschein-2/" target="_blank" rel="noopener" class="footer-text-link">Gutschein kaufen</a>
                     </div>
                 </div>
