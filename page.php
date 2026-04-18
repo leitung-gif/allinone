@@ -4,7 +4,6 @@
  */
 get_header();
 ?>
-<main id="main-content">
     <section class="page-hero">
         <div class="page-padding">
             <div class="container fade-up">
@@ -22,5 +21,4 @@ get_header();
             </div>
         </div>
     </section>
-</main>
 <?php get_footer(); ?>
