@@ -124,11 +124,11 @@ $t = get_template_directory_uri();
                         <div class="signpost fade-up"><span class="signpost-text">Follow &amp; Connect</span><div class="signpost-line"></div></div>
                         <p class="fade-up">Bleiben Sie auf dem Laufenden: Folgen Sie uns auf Instagram und Facebook für Vorher/Nachher-Bilder, Angebote, Neuigkeiten aus unseren Salons und exklusive Einblicke hinter die Kulissen.</p>
                         <div class="social-grid fade-up" style="grid-template-columns: 1fr 1fr;">
-                            <a href="https://trea.tw/JfX4W88qK6WJF9y6u" target="_blank" rel="noopener" class="social-card">
+                            <a href="https://www.instagram.com/all_in_one_beauty_" target="_blank" rel="noopener" class="social-card">
                                 <i class="fa-brands fa-instagram"></i>
                                 <span>Instagram</span>
                             </a>
-                            <a href="#" target="_blank" rel="noopener" class="social-card">
+                            <a href="https://www.facebook.com/allinonebeautyaarau/" target="_blank" rel="noopener" class="social-card">
                                 <i class="fa-brands fa-facebook-f"></i>
                                 <span>Facebook</span>
                             </a>

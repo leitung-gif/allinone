@@ -280,7 +280,8 @@ function aio_beauty_structured_data() {
                         array( '@type' => 'State', 'name' => 'Kanton Aargau' ),
                     ),
                     'sameAs' => array(
-                        'https://trea.tw/JfX4W88qK6WJF9y6u',
+                        'https://www.instagram.com/all_in_one_beauty_',
+                        'https://www.facebook.com/allinonebeautyaarau/',
                     ),
                     'knowsAbout' => array(
                         'Hair Extensions', 'Tape-In Extensions', 'Wimpernverlängerung', 'Lash Lifting', 'Brow Lifting',
