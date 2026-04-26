@@ -87,27 +87,12 @@ function aio_beauty_enqueue_assets() {
 }
 add_action( 'wp_enqueue_scripts', 'aio_beauty_enqueue_assets' );
 
-// ─── Treatwell Booking Widget (DISABLED — Treatwell active from 1. Mai 2025) ───
-// function aio_beauty_treatwell_widget() {
-//     echo '<script src="https://buchung.treatwell.ch/common/venue-menu/javascript/widget-button.js?v1"></script>' . "\n";
-//     echo '<script>' . "\n";
-//     echo '(function() {' . "\n";
-//     echo '  var link = document.createElement("link");' . "\n";
-//     echo '  link.type = "text/css";' . "\n";
-//     echo '  link.href = "https://buchung.treatwell.ch/common/venue-menu/css/widget-button.css";' . "\n";
-//     echo '  link.rel = "stylesheet";' . "\n";
-//     echo '  link.media = "screen";' . "\n";
-//     echo '  document.getElementsByTagName("head")[0].appendChild(link);' . "\n";
-//     echo '}());' . "\n";
-//     echo '</script>' . "\n";
-// }
-// add_action( 'wp_head', 'aio_beauty_treatwell_widget', 99 );
 
 // ─── Preload Critical Assets + GEO Discovery ───
 function aio_beauty_preload_assets() {
     $t = get_template_directory_uri();
-    echo '<link rel="preload" href="' . esc_url( $t . '/images/hero.png' ) . '" as="image" fetchpriority="high">' . "\n";
-    echo '<link rel="preload" href="' . esc_url( $t . '/images/logo.png' ) . '" as="image">' . "\n";
+    echo '<link rel="preload" href="' . esc_url( $t . '/images/hero.webp' ) . '" as="image" fetchpriority="high">' . "\n";
+    echo '<link rel="preload" href="' . esc_url( $t . '/images/logo.webp' ) . '" as="image">' . "\n";
     echo '<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>' . "\n";
     echo '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>' . "\n";
 }
@@ -118,8 +103,13 @@ function aio_beauty_meta_tags() {
     $t   = get_template_directory_uri();
     $seo = aio_beauty_get_page_seo();
 
-    // Favicon
+    // Favicon & Theme Color
     echo '<meta name="theme-color" content="#9C8970">' . "\n";
+    echo '<meta name="theme-color" content="#1E1E1E" media="(prefers-color-scheme: dark)">' . "\n";
+    echo '<link rel="icon" type="image/svg+xml" href="' . esc_url( $t . '/favicon.svg' ) . '">' . "\n";
+    echo '<link rel="icon" type="image/png" sizes="32x32" href="' . esc_url( $t . '/favicon-32x32.png' ) . '">' . "\n";
+    echo '<link rel="apple-touch-icon" sizes="180x180" href="' . esc_url( $t . '/apple-touch-icon.png' ) . '">' . "\n";
+    echo '<link rel="manifest" href="' . esc_url( $t . '/site.webmanifest' ) . '">' . "\n";
     echo '<meta name="format-detection" content="telephone=no">' . "\n";
 
     // Language & Region
@@ -144,7 +134,7 @@ function aio_beauty_meta_tags() {
     // Open Graph
     echo '<meta property="og:title" content="' . esc_attr( $seo['title'] ) . '">' . "\n";
     echo '<meta property="og:description" content="' . esc_attr( $seo['description'] ) . '">' . "\n";
-    echo '<meta property="og:image" content="' . esc_url( $t . '/images/hero.png' ) . '">' . "\n";
+    echo '<meta property="og:image" content="' . esc_url( $t . '/images/hero.webp' ) . '">' . "\n";
     echo '<meta property="og:url" content="' . esc_url( $seo['url'] ) . '">' . "\n";
     echo '<meta property="og:type" content="website">' . "\n";
     echo '<meta property="og:locale" content="de_CH">' . "\n";
@@ -154,7 +144,7 @@ function aio_beauty_meta_tags() {
     echo '<meta name="twitter:card" content="summary_large_image">' . "\n";
     echo '<meta name="twitter:title" content="' . esc_attr( $seo['title'] ) . '">' . "\n";
     echo '<meta name="twitter:description" content="' . esc_attr( $seo['description'] ) . '">' . "\n";
-    echo '<meta name="twitter:image" content="' . esc_url( $t . '/images/hero.png' ) . '">' . "\n";
+    echo '<meta name="twitter:image" content="' . esc_url( $t . '/images/hero.webp' ) . '">' . "\n";
 }
 add_action( 'wp_head', 'aio_beauty_meta_tags', 2 );
 
@@ -204,7 +194,7 @@ function aio_beauty_get_page_seo() {
     } elseif ( is_page( 'agb' ) ) {
         $seo = array(
             'title'       => 'AGB | All in one Beauty by Daniela',
-            'description' => 'Allgemeine Geschäftsbedingungen von All in one Beauty by Daniela. Gültig für alle Dienstleistungen und Behandlungen in unseren Salons in Gränichen und Suhr.',
+            'description' => 'Allgemeine Geschäftsbedingungen von All in one Beauty by Daniela. Gültig für alle Dienstleistungen und Behandlungen in meinen Salons in Gränichen und Suhr.',
             'keywords'    => 'AGB All in one Beauty, Geschäftsbedingungen Kosmetikstudio, Stornierung',
             'url'         => $base . '/agb/',
         );
@@ -224,7 +214,7 @@ function aio_beauty_get_page_seo() {
 function aio_beauty_structured_data() {
     $t    = get_template_directory_uri();
     $base = 'https://www.all-in-one-beauty.ch';
-    $logo = esc_url( $t . '/images/logo.png' );
+    $logo = esc_url( $t . '/images/logo.webp' );
 
     if ( is_front_page() ) {
         $schema = array(
@@ -361,10 +351,10 @@ function aio_beauty_structured_data() {
             '@context'   => 'https://schema.org',
             '@type'      => 'FAQPage',
             'mainEntity' => array(
-                array( '@type' => 'Question', 'name' => 'Was kostet eine Wimpernverlängerung bei All in one Beauty?', 'acceptedAnswer' => array( '@type' => 'Answer', 'text' => 'Eine Neuanlage Full Set kostet CHF 149.–. Auffüllen je nach Zeitraum zwischen CHF 59.– und CHF 119.–. Wir bieten Classic, Volume und Mega Volume in unseren Salons in Gränichen und Suhr an.' ) ),
-                array( '@type' => 'Question', 'name' => 'Bietet All in one Beauty Permanent Make-Up an?', 'acceptedAnswer' => array( '@type' => 'Answer', 'text' => 'Ja, wir bieten professionelles Permanent Make-Up und Microblading für Augenbrauen (ab CHF 185.–), Lippenkontur (ab CHF 180.–) und Lidstriche (ab CHF 130.–) in Gränichen und Suhr an.' ) ),
-                array( '@type' => 'Question', 'name' => 'Wo befinden sich die All in one Beauty Salons?', 'acceptedAnswer' => array( '@type' => 'Answer', 'text' => 'Wir haben zwei Standorte: Den Hauptsalon in Gränichen (Mo-Fr 08:00-20:00, Sa 08:00-18:00) und einen zweiten Salon in Suhr (Mo-Fr 08:30-19:30, Sa 08:00-17:30) im Kanton Aargau.' ) ),
-                array( '@type' => 'Question', 'name' => 'Wie kann ich einen Termin buchen?', 'acceptedAnswer' => array( '@type' => 'Answer', 'text' => 'Sie können online über unser Buchungssystem buchen, per WhatsApp unter 076 503 66 63 schreiben oder uns telefonisch erreichen. Alle Buchungswege sind 24/7 verfügbar.' ) ),
+                array( '@type' => 'Question', 'name' => 'Was kostet eine Wimpernverlängerung bei All in one Beauty?', 'acceptedAnswer' => array( '@type' => 'Answer', 'text' => 'Eine Neuanlage Full Set kostet CHF 149.–. Auffüllen je nach Zeitraum zwischen CHF 59.– und CHF 119.–. Ich biete Classic, Volume und Mega Volume in meinen Salons in Gränichen und Suhr an.' ) ),
+                array( '@type' => 'Question', 'name' => 'Bietet All in one Beauty Permanent Make-Up an?', 'acceptedAnswer' => array( '@type' => 'Answer', 'text' => 'Ja, ich biete professionelles Permanent Make-Up und Microblading für Augenbrauen (ab CHF 185.–), Lippenkontur (ab CHF 180.–) und Lidstriche (ab CHF 130.–) in Gränichen und Suhr an.' ) ),
+                array( '@type' => 'Question', 'name' => 'Wo befinden sich die All in one Beauty Salons?', 'acceptedAnswer' => array( '@type' => 'Answer', 'text' => 'Ich habe zwei Standorte: Den Hauptsalon in Gränichen (Mo-Fr 08:00-20:00, Sa 08:00-18:00) und einen zweiten Salon in Suhr (Mo-Fr 08:30-19:30, Sa 08:00-17:30) im Kanton Aargau.' ) ),
+                array( '@type' => 'Question', 'name' => 'Wie kann ich einen Termin buchen?', 'acceptedAnswer' => array( '@type' => 'Answer', 'text' => 'Sie können online über mein Buchungssystem buchen, per WhatsApp unter 076 503 66 63 schreiben oder mich telefonisch erreichen. Alle Buchungswege sind 24/7 verfügbar.' ) ),
             ),
         );
         echo '<script type="application/ld+json">' . wp_json_encode( $faq, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE ) . '</script>' . "\n";

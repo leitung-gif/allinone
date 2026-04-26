@@ -22,7 +22,7 @@
             <div class="container">
                 <div class="nav-container">
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo">
-                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/logo.png' ); ?>" alt="All in one Beauty Logo">
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/logo.webp' ); ?>" alt="All in one Beauty Logo">
                     </a>
                     <button class="nav-toggle" aria-label="Menu öffnen"><span></span><span></span></button>
                     <nav class="nav-links">

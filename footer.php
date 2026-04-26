@@ -1,13 +1,14 @@
     </main>
 
     <!-- ========== FOOTER ========== -->
+    <div class="footer-transition"></div>
     <footer class="footer">
         <div class="page-padding">
             <div class="container">
                 <div class="footer-grid">
                     <div class="footer-col">
                         <div class="signpost"><span class="signpost-text">Buchung &amp; Kontakt</span><div class="signpost-line"></div></div>
-                        <p class="footer-info">Für Buchungen und Anfragen<br>kontaktieren Sie uns gerne.</p>
+                        <p class="footer-info">Für Buchungen und Anfragen<br>kontaktieren Sie mich gerne.</p>
                         <a href="https://allinone.hairlist.ch/termin" target="_blank" rel="noopener" class="footer-text-link">Online Termin buchen</a><br>
                         <a href="tel:+41765036663" class="footer-text-link">T: +41 76 503 66 63</a><br>
                         <a href="mailto:info@all-in-one-beauty.ch" class="footer-text-link">E: info@all-in-one-beauty.ch</a>
@@ -36,7 +37,7 @@
                 </div>
                 <div class="footer-credit" style="text-align:center;padding:0.75rem 0;font-size:0.7rem;color:var(--clr-text-muted);letter-spacing:0.08em;text-transform:uppercase;">Made by <a href="https://www.lorien.group/" target="_blank" rel="noopener" style="color:var(--clr-accent);">Lorien Group</a></div>
                 <div class="footer-bottom">
-                    <div class="footer-copyright">&copy; <?php echo date( 'Y' ); ?> All in one Beauty by Daniela. Alle Rechte vorbehalten.</div>
+                    <p class="footer-copyright">&copy; <?php echo wp_date( 'Y' ); ?> All in one Beauty by Daniela. Alle Rechte vorbehalten.</p>
                     <div class="footer-legal">
                         <a href="<?php echo esc_url( home_url( '/impressum/' ) ); ?>">Impressum</a>
                         <a href="<?php echo esc_url( home_url( '/agb/' ) ); ?>">AGB</a>
@@ -47,9 +48,22 @@
         </div>
     </footer>
 
+    <!-- Mobile Sticky CTA Bar -->
+    <div class="mobile-sticky-cta">
+        <a href="https://allinone.hairlist.ch/termin" target="_blank" rel="noopener">
+            <i class="fa-solid fa-calendar-check"></i> Termin buchen
+        </a>
+        <a href="tel:+41765036663">
+            <i class="fa-solid fa-phone"></i> Anrufen
+        </a>
+        <a href="https://wa.me/41765036663" target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+    </div>
+
     <!-- Cookie Consent Banner -->
     <div class="cookie-consent" role="dialog" aria-label="Cookie-Hinweis" style="position:fixed;bottom:0;left:0;right:0;background:var(--clr-text);color:var(--clr-bg);padding:1.25rem 5%;display:none;z-index:9999;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:0.8125rem;font-family:var(--font-body);">
-        <p style="margin:0;color:rgba(255,252,245,0.8);flex:1;">Wir verwenden Cookies, um Ihnen die bestmögliche Erfahrung zu bieten. <a href="<?php echo esc_url( home_url( '/datenschutz/' ) ); ?>" style="color:var(--clr-accent);text-decoration:underline;">Datenschutz</a></p>
+        <p style="margin:0;color:rgba(255,252,245,0.8);flex:1;">Ich verwende Cookies, um Ihnen die bestmögliche Erfahrung zu bieten. <a href="<?php echo esc_url( home_url( '/datenschutz/' ) ); ?>" style="color:var(--clr-accent);text-decoration:underline;">Datenschutz</a></p>
         <div style="display:flex;gap:0.75rem;">
             <button class="cookie-accept" style="padding:0.6rem 1.5rem;background:var(--clr-accent);color:#fff;border:none;font-family:var(--font-body);font-size:0.7rem;text-transform:uppercase;letter-spacing:0.12em;font-weight:500;cursor:pointer;">Akzeptieren</button>
             <button class="cookie-decline" style="padding:0.6rem 1.5rem;background:transparent;color:var(--clr-bg);border:1px solid rgba(255,252,245,0.3);font-family:var(--font-body);font-size:0.7rem;text-transform:uppercase;letter-spacing:0.12em;font-weight:500;cursor:pointer;">Ablehnen</button>

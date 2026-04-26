@@ -1,0 +1,21 @@
+{
+    "name": "All in one Beauty",
+    "short_name": "AIO Beauty",
+    "description": "Premium Kosmetikstudio in Gränichen & Suhr, Aargau — Wimpern, Permanent Make-Up, Hair Extensions, Nagelmodellage & mehr.",
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#9C8970",
+    "background_color": "#FFFCF5",
+    "icons": [
+        {
+            "src": "favicon.svg",
+            "type": "image/svg+xml",
+            "sizes": "any"
+        },
+        {
+            "src": "apple-touch-icon.png",
+            "type": "image/png",
+            "sizes": "180x180"
+        }
+    ]
+}

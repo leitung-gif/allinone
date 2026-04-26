@@ -233,6 +233,9 @@ a {
     display: flex;
     justify-content: center;
     gap: 2rem;
+    max-height: 50px;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease, opacity 0.3s ease, border 0.3s ease;
 }
 
 .header-topbar a {
@@ -1125,6 +1128,11 @@ a {
     100% { transform: translateX(-50%); }
 }
 
+/* Marquee pause on hover */
+.marquee-strip:hover .marquee-track {
+    animation-play-state: paused;
+}
+
 /* ============================================================
    FOOTER
    ============================================================ */
@@ -1427,23 +1435,219 @@ a {
 }
 
 /* ============================================================
-   ANIMATIONS
+   ANIMATIONS & MOTION SYSTEM
    ============================================================ */
+
+/* --- Fade Up --- */
 .fade-up {
     opacity: 0;
     transform: translateY(2rem);
     transition: opacity 1s ease, transform 1s ease;
 }
+.fade-up.visible { opacity: 1; transform: translateY(0); }
 
-.fade-up.visible {
-    opacity: 1;
-    transform: translateY(0);
+/* --- Fade Left --- */
+.fade-left {
+    opacity: 0;
+    transform: translateX(-3rem);
+    transition: opacity 1s ease, transform 1s ease;
+}
+.fade-left.visible { opacity: 1; transform: translateX(0); }
+
+/* --- Fade Right --- */
+.fade-right {
+    opacity: 0;
+    transform: translateX(3rem);
+    transition: opacity 1s ease, transform 1s ease;
+}
+.fade-right.visible { opacity: 1; transform: translateX(0); }
+
+/* --- Scale In --- */
+.scale-in {
+    opacity: 0;
+    transform: scale(0.88);
+    transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.scale-in.visible { opacity: 1; transform: scale(1); }
+
+/* --- Clip Reveal (bottom to top) --- */
+.clip-reveal {
+    clip-path: inset(0 0 100% 0);
+    transition: clip-path 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.clip-reveal.visible { clip-path: inset(0 0 0 0); }
+
+/* --- Stagger Delays (universal) --- */
+[data-delay="1"] { transition-delay: 0.15s; }
+[data-delay="2"] { transition-delay: 0.3s; }
+[data-delay="3"] { transition-delay: 0.45s; }
+[data-delay="4"] { transition-delay: 0.6s; }
+
+/* ============================================================
+   HEADER — SCROLL COMPACT STATE
+   ============================================================ */
+.header.header-scrolled {
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.06);
 }
 
-/* Stagger children */
-.fade-up[data-delay="1"] { transition-delay: 0.15s; }
-.fade-up[data-delay="2"] { transition-delay: 0.3s; }
-.fade-up[data-delay="3"] { transition-delay: 0.45s; }
+.header.header-scrolled .header-topbar {
+    max-height: 0;
+    padding: 0;
+    border-color: transparent;
+    opacity: 0;
+}
+
+.header.header-scrolled .nav-container {
+    padding: 0.65rem 0;
+}
+
+.header.header-scrolled .logo img {
+    height: 38px;
+}
+
+/* ============================================================
+   HERO — CURSOR-RESPONSIVE GRADIENT
+   ============================================================ */
+.hero-cursor-gradient {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    background: radial-gradient(
+        600px circle at var(--mx, 50%) var(--my, 50%),
+        rgba(156, 137, 112, 0.18),
+        transparent 40%
+    );
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.hero:hover .hero-cursor-gradient { opacity: 1; }
+
+/* ============================================================
+   HERO — FLOATING BADGE (Overlapping Element)
+   ============================================================ */
+.hero-floating-badge {
+    position: absolute;
+    bottom: -1.75rem;
+    right: 8%;
+    z-index: 20;
+    background: var(--clr-text);
+    color: var(--clr-bg);
+    padding: 1.25rem 2rem;
+    font-family: var(--font-body);
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
+    animation: badge-float 4s ease-in-out infinite;
+}
+
+.hero-floating-badge .badge-icon {
+    font-size: 1.5rem;
+    color: var(--clr-accent);
+}
+
+.hero-floating-badge .badge-number {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 1;
+    color: var(--clr-accent);
+}
+
+@keyframes badge-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+
+/* ============================================================
+   TREATMENT BLOCKS — ALTERNATING BACKGROUNDS
+   ============================================================ */
+.treatment-block:nth-child(even) {
+    background: var(--clr-bg-alt);
+}
+
+/* ============================================================
+   FOOTER TRANSITION GRADIENT
+   ============================================================ */
+.footer-transition {
+    height: 80px;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(156, 137, 112, 0.04) 50%,
+        rgba(156, 137, 112, 0.08)
+    );
+}
+
+/* ============================================================
+   FAQ SECTION
+   ============================================================ */
+.faq-grid {
+    border-top: 1px solid var(--clr-border-light);
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--clr-border-light);
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    cursor: pointer;
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--clr-text);
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    transition: color 0.3s ease;
+    gap: 1rem;
+}
+
+.faq-question:hover { color: var(--clr-accent); }
+
+.faq-icon {
+    font-size: 1.25rem;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    flex-shrink: 0;
+    color: var(--clr-accent);
+}
+
+.faq-item.active .faq-icon { transform: rotate(45deg); }
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1), padding 0.5s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+    padding-bottom: 1.5rem;
+}
+
+.faq-answer p { margin: 0; }
+
+/* ============================================================
+   MOBILE STICKY CTA BAR
+   ============================================================ */
+.mobile-sticky-cta { display: none; }
+
+/* ============================================================
+   SCROLL-DRIVEN CTA ZOOM
+   ============================================================ */
+.cta-bg { will-change: transform; }
 
 /* ============================================================
    RESPONSIVE — TABLET (max 992px)
@@ -1560,7 +1764,7 @@ a {
     .hero {
         min-height: 100vh;
         min-height: 100svh;
-        background: url('images/hero-mobile.png') center/cover no-repeat;
+        background: url('images/hero-mobile.webp') center/cover no-repeat;
     }
 
     .hero-img {
@@ -1889,5 +2093,109 @@ a {
 
     .testimonial-quote {
         font-size: clamp(1.2rem, 4vw, 1.8rem);
+    }
+
+    /* ---- MOBILE STICKY CTA BAR ---- */
+    .mobile-sticky-cta {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 998;
+        display: flex;
+        background: var(--clr-text);
+        border-top: 1px solid rgba(255, 252, 245, 0.1);
+        padding: 0;
+    }
+
+    .mobile-sticky-cta a {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 0.9rem 0.5rem;
+        color: var(--clr-bg);
+        font-family: var(--font-body);
+        font-size: 0.65rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-weight: 500;
+        text-align: center;
+        transition: background 0.2s ease;
+        white-space: nowrap;
+    }
+
+    .mobile-sticky-cta a:first-child {
+        background: var(--clr-accent);
+        color: #fff;
+    }
+
+    .mobile-sticky-cta a + a {
+        border-left: 1px solid rgba(255, 252, 245, 0.1);
+    }
+
+    .mobile-sticky-cta i {
+        font-size: 1rem;
+    }
+
+    .fab {
+        bottom: 4.5rem;
+    }
+
+    body {
+        padding-bottom: 3.25rem;
+    }
+
+    /* ---- FLOATING BADGE — HIDE ON MOBILE ---- */
+    .hero-floating-badge {
+        display: none;
+    }
+
+    /* ---- HERO CURSOR GRADIENT — DISABLED ON MOBILE ---- */
+    .hero-cursor-gradient {
+        display: none;
+    }
+}
+
+/* ============================================================
+   ACCESSIBILITY — REDUCED MOTION
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+    .fade-up, .fade-left, .fade-right, .scale-in {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .clip-reveal {
+        clip-path: none;
+        transition: none;
+    }
+
+    .marquee-track {
+        animation: none;
+    }
+
+    .hero-img {
+        transform: none !important;
+    }
+
+    .cta-bg {
+        transform: none !important;
+    }
+
+    .hero-floating-badge {
+        animation: none;
+    }
+
+    .fab-icon::after {
+        animation: none;
+    }
+
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
     }
 }
