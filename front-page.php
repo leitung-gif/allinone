@@ -18,7 +18,7 @@ $t = get_template_directory_uri();
                 <h1><em>Ihr Kosmetikstudio</em><br><span class="caps">im Aargau</span></h1>
                 <p class="hero-subtitle">Hair Extensions · Wimpern · Permanent Make-Up · Gesichtsbehandlungen · Nails · Bodyforming</p>
                 <div class="hero-btns">
-                    <a href="https://allinone.hairlist.ch/termin" target="_blank" rel="noopener" class="btn btn-hero">Jetzt Termin Buchen <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="https://www.treatwell.ch/" class="btn btn-hero" onclick='wahanda.openOnlineBookingWidget("https://buchung.treatwell.ch/ort/520140/menue/"); return false;' target="_blank">Jetzt Termin Buchen <i class="fa-solid fa-arrow-right"></i></a>
                     <a href="<?php echo esc_url( home_url( '/behandlungen/' ) ); ?>" class="arrow-link hero-arrow-link">
                         <span>Alle Behandlungen &amp; Preise</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" viewBox="0 0 21 14" fill="none"><path d="M20.1336 7.00037C16.2576 7.00037 13.1152 3.86612 13.1152 0M20.1336 7.00037C16.2576 7.00037 13.1152 10.1339 13.1152 14M20.1336 7.00037L0 7" stroke="currentColor"/></svg>
@@ -45,7 +45,7 @@ $t = get_template_directory_uri();
                         <span>So einfach buchen Sie:</span>
                     </div>
                     <div class="quick-book-actions">
-                        <a href="https://allinone.hairlist.ch/termin" target="_blank" rel="noopener" class="quick-book-btn qb-primary">
+                        <a href="https://www.treatwell.ch/" class="quick-book-btn qb-primary" onclick='wahanda.openOnlineBookingWidget("https://buchung.treatwell.ch/ort/520140/menue/"); return false;' target="_blank">
                             <i class="fa-solid fa-calendar-plus"></i> Online buchen
                         </a>
                         <a href="https://wa.me/41765036663" target="_blank" rel="noopener" class="quick-book-btn qb-whatsapp">
@@ -234,7 +234,7 @@ $t = get_template_directory_uri();
                             <li><span>Sa</span><span>08:00–18:00 Uhr</span></li>
                         </ul>
                         <div style="margin-top: 1.5rem;">
-                            <a href="https://allinone.hairlist.ch/termin" target="_blank" rel="noopener" class="btn" style="width: 100%; text-align: center;">Termin buchen Gränichen</a>
+                            <a href="https://www.treatwell.ch/" class="btn" style="width: 100%; text-align: center;" onclick='wahanda.openOnlineBookingWidget("https://buchung.treatwell.ch/ort/520140/menue/"); return false;' target="_blank">Termin buchen Gränichen</a>
                         </div>
                     </div>
                     <div class="standort-card">
@@ -246,7 +246,7 @@ $t = get_template_directory_uri();
                             <li><span>Sa</span><span>08:00–17:30 Uhr</span></li>
                         </ul>
                         <div style="margin-top: 1.5rem;">
-                            <a href="https://allinone.hairlist.ch/termin" target="_blank" rel="noopener" class="btn" style="width: 100%; text-align: center;">Termin buchen Suhr</a>
+                            <a href="https://www.treatwell.ch/" class="btn" style="width: 100%; text-align: center;" onclick='wahanda.openOnlineBookingWidget("https://buchung.treatwell.ch/ort/520140/menue/"); return false;' target="_blank">Termin buchen Suhr</a>
                         </div>
                     </div>
                 </div>
@@ -297,7 +297,7 @@ $t = get_template_directory_uri();
                                 <i class="fa-solid fa-plus faq-icon" aria-hidden="true"></i>
                             </button>
                             <div class="faq-answer">
-                                <p>Online unter allinone.hairlist.ch/termin, per WhatsApp an 076 503 66 63, per E-Mail an info@all-in-one-beauty.ch oder telefonisch. Die Online-Buchung ist rund um die Uhr verfügbar.</p>
+                                <p>Online über Treatwell auf meiner Website, per WhatsApp an 076 503 66 63, per E-Mail an info@all-in-one-beauty.ch oder telefonisch. Die Online-Buchung ist rund um die Uhr verfügbar.</p>
                             </div>
                         </div>
                     </div>
@@ -315,7 +315,7 @@ $t = get_template_directory_uri();
             <h2><em>Bereit für Ihren</em> Verwöhn-Moment?</h2>
             <p>Buchen Sie Ihren Termin online, per WhatsApp oder direkt telefonisch.</p>
             <div class="cta-actions">
-                <a href="https://allinone.hairlist.ch/termin" target="_blank" rel="noopener" class="btn">Jetzt Termin buchen</a>
+                <a href="https://www.treatwell.ch/" class="btn" onclick='wahanda.openOnlineBookingWidget("https://buchung.treatwell.ch/ort/520140/menue/"); return false;' target="_blank">Jetzt Termin buchen</a>
                 <a href="https://wa.me/41765036663" target="_blank" rel="noopener" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
             </div>
         </div>

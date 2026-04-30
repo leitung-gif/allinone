@@ -38,7 +38,7 @@ $t = get_template_directory_uri();
                     <li class="price-item"><span class="price-name">Extensions Entfernung</span><span class="price-val">nach Offerte</span></li>
                 </ul>
                 <div style="margin-top: 2rem;">
-                    <a href="https://allinone.hairlist.ch/termin" target="_blank" rel="noopener" class="btn">Termin buchen</a>
+                    <a href="https://www.treatwell.ch/" class="btn" onclick='wahanda.openOnlineBookingWidget("https://buchung.treatwell.ch/ort/520140/menue/"); return false;' target="_blank">Termin buchen</a>
                 </div>
             </div>
         </div>
@@ -75,7 +75,7 @@ $t = get_template_directory_uri();
                     <li class="price-item"><span class="price-name">Wimpernlifting / Lash Lifting</span><span class="price-val">ab CHF 79.–</span></li>
                 </ul>
                 <div style="margin-top: 2rem;">
-                    <a href="https://allinone.hairlist.ch/termin" target="_blank" rel="noopener" class="btn">Termin buchen</a>
+                    <a href="https://www.treatwell.ch/" class="btn" onclick='wahanda.openOnlineBookingWidget("https://buchung.treatwell.ch/ort/520140/menue/"); return false;' target="_blank">Termin buchen</a>
                 </div>
             </div>
         </div>
@@ -102,7 +102,7 @@ $t = get_template_directory_uri();
                     <li class="price-item"><span class="price-name">Ganzes Gesicht</span><span class="price-val">CHF 60.–</span></li>
                 </ul>
                 <div style="margin-top: 2rem;">
-                    <a href="https://allinone.hairlist.ch/termin" target="_blank" rel="noopener" class="btn">Termin buchen</a>
+                    <a href="https://www.treatwell.ch/" class="btn" onclick='wahanda.openOnlineBookingWidget("https://buchung.treatwell.ch/ort/520140/menue/"); return false;' target="_blank">Termin buchen</a>
                 </div>
             </div>
         </div>
@@ -136,7 +136,7 @@ $t = get_template_directory_uri();
                     <li class="price-item"><span class="price-name">Zahnbleaching</span><span class="price-val">CHF 99.–</span></li>
                 </ul>
                 <div style="margin-top: 2rem;">
-                    <a href="https://allinone.hairlist.ch/termin" target="_blank" rel="noopener" class="btn">Termin buchen</a>
+                    <a href="https://www.treatwell.ch/" class="btn" onclick='wahanda.openOnlineBookingWidget("https://buchung.treatwell.ch/ort/520140/menue/"); return false;' target="_blank">Termin buchen</a>
                 </div>
             </div>
         </div>
@@ -173,7 +173,7 @@ $t = get_template_directory_uri();
                     <li class="price-item"><span class="price-name">Leberfleck / Muttermal (Marilyn Monroe-Style)</span><span class="price-val">CHF 95.–</span></li>
                 </ul>
                 <div style="margin-top: 2rem;">
-                    <a href="https://allinone.hairlist.ch/termin" target="_blank" rel="noopener" class="btn">Termin buchen</a>
+                    <a href="https://www.treatwell.ch/" class="btn" onclick='wahanda.openOnlineBookingWidget("https://buchung.treatwell.ch/ort/520140/menue/"); return false;' target="_blank">Termin buchen</a>
                 </div>
             </div>
         </div>
@@ -202,7 +202,7 @@ $t = get_template_directory_uri();
                     <li class="price-item"><span class="price-name">Locken Styling (inkl. fixieren)</span><span class="price-val">ab CHF 50.–</span></li>
                 </ul>
                 <div style="margin-top: 2rem;">
-                    <a href="https://allinone.hairlist.ch/termin" target="_blank" rel="noopener" class="btn">Termin buchen</a>
+                    <a href="https://www.treatwell.ch/" class="btn" onclick='wahanda.openOnlineBookingWidget("https://buchung.treatwell.ch/ort/520140/menue/"); return false;' target="_blank">Termin buchen</a>
                 </div>
             </div>
         </div>
@@ -249,7 +249,7 @@ $t = get_template_directory_uri();
                     <li class="price-item"><span class="price-name">Fussmassage</span><span class="price-val">CHF 25.–</span></li>
                 </ul>
                 <div style="margin-top: 2rem;">
-                    <a href="https://allinone.hairlist.ch/termin" target="_blank" rel="noopener" class="btn">Termin buchen</a>
+                    <a href="https://www.treatwell.ch/" class="btn" onclick='wahanda.openOnlineBookingWidget("https://buchung.treatwell.ch/ort/520140/menue/"); return false;' target="_blank">Termin buchen</a>
                 </div>
             </div>
         </div>
@@ -306,7 +306,7 @@ $t = get_template_directory_uri();
                     <li class="price-item"><span class="price-name">Rücken</span><span class="price-val">CHF 70.–</span></li>
                 </ul>
                 <div style="margin-top: 2rem;">
-                    <a href="https://allinone.hairlist.ch/termin" target="_blank" rel="noopener" class="btn">Termin buchen</a>
+                    <a href="https://www.treatwell.ch/" class="btn" onclick='wahanda.openOnlineBookingWidget("https://buchung.treatwell.ch/ort/520140/menue/"); return false;' target="_blank">Termin buchen</a>
                 </div>
             </div>
         </div>
@@ -323,7 +323,7 @@ $t = get_template_directory_uri();
             </div>
             <h2><em>Unsicher welche</em> Behandlung passt?</h2>
             <p>Lassen Sie sich bei mir vor Ort unverbindlich beraten. Ich nehme mir Zeit für eine professionelle Hautanalyse und erstelle gemeinsam mit Ihnen Ihren persönlichen Beauty-Plan. Besuchen Sie mich in Gränichen oder Suhr – ich freue mich auf Sie.</p>
-            <a href="https://allinone.hairlist.ch/termin" target="_blank" rel="noopener" class="btn">Kostenlose Beratung buchen</a>
+            <a href="https://www.treatwell.ch/" class="btn" onclick='wahanda.openOnlineBookingWidget("https://buchung.treatwell.ch/ort/520140/menue/"); return false;' target="_blank">Kostenlose Beratung buchen</a>
         </div>
     </section>
 

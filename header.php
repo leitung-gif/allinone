@@ -4,6 +4,17 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <?php wp_head(); ?>
+    <script src="https://buchung.treatwell.ch/common/venue-menu/javascript/widget-button.js?v1"></script>
+    <script>
+      (function() {
+        var link = document.createElement("link");
+        link.type = "text/css";
+        link.href = "https://buchung.treatwell.ch/common/venue-menu/css/widget-button.css";
+        link.rel = "stylesheet";
+        link.media = "screen";
+        document.getElementsByTagName("head")[0].appendChild(link);
+      }());
+    </script>
 </head>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
@@ -30,7 +41,7 @@
                         <a href="<?php echo esc_url( home_url( '/behandlungen/' ) ); ?>" class="nav-link<?php if ( is_page( 'behandlungen' ) ) echo ' active'; ?>">Behandlungen</a>
                         <a href="<?php echo esc_url( home_url( '/ueber-mich/' ) ); ?>" class="nav-link<?php if ( is_page( 'ueber-mich' ) ) echo ' active'; ?>">Über mich</a>
                         <a href="<?php echo esc_url( home_url( '/kontakt/' ) ); ?>" class="nav-link<?php if ( is_page( 'kontakt' ) ) echo ' active'; ?>">Standorte &amp; Kontakt</a>
-                        <a href="https://allinone.hairlist.ch/termin" target="_blank" rel="noopener" class="btn btn-filled">Termin Buchen</a>
+                        <a href="https://www.treatwell.ch/" class="btn btn-filled" onclick='wahanda.openOnlineBookingWidget("https://buchung.treatwell.ch/ort/520140/menue/"); return false;' target="_blank">Termin Buchen</a>
                     </nav>
                 </div>
             </div>
@@ -38,7 +49,7 @@
     </header>
 
     <!-- Floating Booking Button -->
-    <a href="https://allinone.hairlist.ch/termin" target="_blank" rel="noopener" class="fab">
+    <a href="https://www.treatwell.ch/" class="fab" onclick='wahanda.openOnlineBookingWidget("https://buchung.treatwell.ch/ort/520140/menue/"); return false;' target="_blank">
         <span class="fab-icon"><i class="fa-solid fa-calendar-check"></i></span>
         <span class="fab-text">Termin Buchen</span>
     </a>

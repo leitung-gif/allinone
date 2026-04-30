@@ -163,7 +163,7 @@ $t = get_template_directory_uri();
             <div class="signpost" style="justify-content: center;"><span class="signpost-text" style="color: var(--clr-bg);">Lassen Sie mich starten</span><div class="signpost-line" style="background: var(--clr-bg);"></div></div>
             <h2><em>Bereit, sich</em> verwöhnen zu lassen?</h2>
             <p>Ich freue mich darauf, Sie persönlich in einem meiner Salons zu begrüssen. Buchen Sie Ihren Termin online oder schreiben Sie mir direkt.</p>
-            <a href="https://allinone.hairlist.ch/termin" target="_blank" rel="noopener" class="btn">Jetzt Termin vereinbaren</a>
+            <a href="https://www.treatwell.ch/" class="btn" onclick='wahanda.openOnlineBookingWidget("https://buchung.treatwell.ch/ort/520140/menue/"); return false;' target="_blank">Jetzt Termin vereinbaren</a>
         </div>
     </section>
 

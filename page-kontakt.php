@@ -30,7 +30,7 @@ $t = get_template_directory_uri();
                         <i class="fa-solid fa-calendar-alt contact-icon"></i>
                         <h3><em>Online</em><br><span class="caps">Termin buchen</span></h3>
                         <p>Mein Terminbuchungssystem ist rund um die Uhr für Sie geöffnet. Wählen Sie Ihren gewünschten Salon, Ihre Behandlung und Ihren Wunschtermin – einfach, schnell und unkompliziert. Sie erhalten sofort eine Bestätigung per E-Mail.</p>
-                        <a href="https://allinone.hairlist.ch/termin" target="_blank" rel="noopener" class="btn" style="width: 100%;">Jetzt online buchen</a>
+                        <a href="https://www.treatwell.ch/" class="btn" style="width: 100%;" onclick='wahanda.openOnlineBookingWidget("https://buchung.treatwell.ch/ort/520140/menue/"); return false;' target="_blank">Jetzt online buchen</a>
                     </div>
                     <div class="contact-card">
                         <i class="fa-brands fa-whatsapp contact-icon"></i>
@@ -66,7 +66,7 @@ $t = get_template_directory_uri();
                             <li><span>Sonntag</span><span>Geschlossen</span></li>
                         </ul>
                         <div style="margin-top: 1.5rem;">
-                            <a href="https://allinone.hairlist.ch/termin" target="_blank" rel="noopener" class="btn" style="width: 100%; text-align: center;">Termin Gränichen buchen</a>
+                            <a href="https://www.treatwell.ch/" class="btn" style="width: 100%; text-align: center;" onclick='wahanda.openOnlineBookingWidget("https://buchung.treatwell.ch/ort/520140/menue/"); return false;' target="_blank">Termin Gränichen buchen</a>
                         </div>
                     </div>
                     <div class="standort-card">
@@ -83,7 +83,7 @@ $t = get_template_directory_uri();
                             <li><span>Sonntag</span><span>Geschlossen</span></li>
                         </ul>
                         <div style="margin-top: 1.5rem;">
-                            <a href="https://allinone.hairlist.ch/termin" target="_blank" rel="noopener" class="btn" style="width: 100%; text-align: center;">Termin Suhr buchen</a>
+                            <a href="https://www.treatwell.ch/" class="btn" style="width: 100%; text-align: center;" onclick='wahanda.openOnlineBookingWidget("https://buchung.treatwell.ch/ort/520140/menue/"); return false;' target="_blank">Termin Suhr buchen</a>
                         </div>
                     </div>
                 </div>
@@ -114,7 +114,7 @@ $t = get_template_directory_uri();
                             <i class="fa-brands fa-whatsapp"></i>
                             <span>WhatsApp</span>
                         </a>
-                        <a href="https://allinone.hairlist.ch/termin" target="_blank" rel="noopener" class="social-card">
+                        <a href="https://www.treatwell.ch/" class="social-card" onclick='wahanda.openOnlineBookingWidget("https://buchung.treatwell.ch/ort/520140/menue/"); return false;' target="_blank">
                             <i class="fa-solid fa-calendar-check"></i>
                             <span>Online buchen</span>
                         </a>
@@ -164,7 +164,7 @@ $t = get_template_directory_uri();
             <div class="signpost" style="justify-content: center;"><span class="signpost-text" style="color: var(--clr-bg);">Bereit?</span><div class="signpost-line" style="background: var(--clr-bg);"></div></div>
             <h2><em>Sichern Sie sich</em> jetzt Ihren Termin.</h2>
             <p>Ob in Gränichen oder in Suhr – ich freue mich darauf, Sie persönlich willkommen zu heissen. Buchen Sie jetzt und erleben Sie Kosmetik auf höchstem Niveau.</p>
-            <a href="https://allinone.hairlist.ch/termin" target="_blank" rel="noopener" class="btn">Jetzt Termin vereinbaren</a>
+            <a href="https://www.treatwell.ch/" class="btn" onclick='wahanda.openOnlineBookingWidget("https://buchung.treatwell.ch/ort/520140/menue/"); return false;' target="_blank">Jetzt Termin vereinbaren</a>
         </div>
     </section>
 
